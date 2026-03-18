@@ -52,31 +52,41 @@ export default async function Image() {
           style={{
             display: "flex",
             alignItems: "center",
-            gap: 8,
-            padding: "8px 20px",
-            borderRadius: 100,
-            background: "rgba(191,255,0,0.1)",
-            border: "1px solid rgba(191,255,0,0.2)",
+            gap: 12,
             marginBottom: 24,
           }}
         >
           <div
             style={{
-              width: 8,
-              height: 8,
-              borderRadius: "50%",
-              background: "#BFFF00",
-            }}
-          />
-          <span
-            style={{
-              color: "#BFFF00",
-              fontSize: 18,
-              fontWeight: 600,
+              width: 52,
+              height: 52,
+              borderRadius: 12,
+              background: "#E50914",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
-            100% FREE — BAHASA INDONESIA
-          </span>
+            <span style={{ color: "white", fontSize: 32, fontWeight: 800 }}>V</span>
+          </div>
+          <div
+            style={{
+              padding: "8px 20px",
+              borderRadius: 100,
+              background: "rgba(191,255,0,0.1)",
+              border: "1px solid rgba(191,255,0,0.2)",
+            }}
+          >
+            <span
+              style={{
+                color: "#BFFF00",
+                fontSize: 18,
+                fontWeight: 600,
+              }}
+            >
+              100% FREE — BAHASA INDONESIA
+            </span>
+          </div>
         </div>
 
         {/* Title */}

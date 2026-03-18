@@ -189,8 +189,8 @@ function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-[#BFFF00] flex items-center justify-center group-hover:scale-110 transition-transform">
-            <Zap className="w-4 h-4 text-black" />
+          <div className="w-8 h-8 rounded-lg bg-[#E50914] flex items-center justify-center group-hover:scale-110 transition-transform">
+            <span className="text-white font-extrabold text-sm" style={{ fontFamily: "'Syne', sans-serif" }}>V</span>
           </div>
           <span className="font-bold text-lg tracking-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
             VIBENGODING<span className="text-[#BFFF00]">.ID</span>
@@ -919,7 +919,7 @@ function CTASection() {
             href="#courses"
             className="inline-flex items-center gap-2 px-10 py-5 bg-[#BFFF00] text-black font-bold text-lg rounded-full hover:bg-[#d4ff4d] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(191,255,0,0.3)]"
           >
-            <Zap className="w-5 h-5" />
+            <Play className="w-5 h-5" />
             Gas Belajar Sekarang
             <ArrowRight className="w-5 h-5" />
           </a>
@@ -936,8 +936,8 @@ function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand */}
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg bg-[#BFFF00] flex items-center justify-center">
-              <Zap className="w-3.5 h-3.5 text-black" />
+            <div className="w-7 h-7 rounded-lg bg-[#E50914] flex items-center justify-center">
+              <span className="text-white font-extrabold text-xs" style={{ fontFamily: "'Syne', sans-serif" }}>V</span>
             </div>
             <span className="font-bold text-sm tracking-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
               VIBENGODING<span className="text-[#BFFF00]">.ID</span>

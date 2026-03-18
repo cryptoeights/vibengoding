@@ -669,8 +669,8 @@ export default function BelajarVibeCodingPage() {
         <footer className="border-t border-[#1a1a1a] py-8">
           <div className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#444]">
             <div className="flex items-center gap-2">
-              <div className="w-6 h-6 rounded bg-[#BFFF00] flex items-center justify-center">
-                <Zap className="w-3 h-3 text-black" />
+              <div className="w-6 h-6 rounded bg-[#E50914] flex items-center justify-center">
+                <span className="text-white font-extrabold text-[10px]" style={{ fontFamily: "'Syne', sans-serif" }}>V</span>
               </div>
               <span className="font-bold" style={{ fontFamily: "'Syne', sans-serif" }}>
                 VIBENGODING<span className="text-[#BFFF00]">.ID</span>
