@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Teaser video
+teaser/node_modules/
+teaser/.remotion/
+teaser/out/

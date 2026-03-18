@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { SessionProvider } from "@/components/session-provider";
+import { AnalyticsTracker } from "@/components/analytics-tracker";
 
 const siteUrl = "https://vibengoding.id";
 
@@ -291,7 +292,10 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <SessionProvider>{children}</SessionProvider>
+        <SessionProvider>
+          <AnalyticsTracker />
+          {children}
+        </SessionProvider>
       </body>
     </html>
   );
