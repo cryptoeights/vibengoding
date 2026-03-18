@@ -235,7 +235,7 @@ function Navbar() {
           ) : (
             <button
               onClick={() => signIn("google")}
-              className="px-5 py-2 bg-[#E50914] text-black text-sm font-semibold rounded-full hover:bg-[#FF2D3B] transition-all hover:scale-105 cursor-pointer"
+              className="px-5 py-2 bg-[#E50914] text-white text-sm font-semibold rounded-full hover:bg-[#FF2D3B] transition-all hover:scale-105 cursor-pointer"
             >
               Masuk
             </button>
@@ -291,7 +291,7 @@ function Navbar() {
               ) : (
                 <button
                   onClick={() => { signIn("google"); setIsOpen(false); }}
-                  className="px-5 py-3 bg-[#E50914] text-black text-sm font-semibold rounded-full text-center hover:bg-[#FF2D3B] transition-all cursor-pointer"
+                  className="px-5 py-3 bg-[#E50914] text-white text-sm font-semibold rounded-full text-center hover:bg-[#FF2D3B] transition-all cursor-pointer"
                 >
                   Masuk dengan Google
                 </button>
@@ -400,7 +400,7 @@ function HeroSection() {
         >
           <a
             href="#courses"
-            className="group flex items-center gap-2 px-8 py-4 bg-[#E50914] text-black font-bold rounded-full hover:bg-[#FF2D3B] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(229,9,20,0.3)]"
+            className="group flex items-center gap-2 px-8 py-4 bg-[#E50914] text-white font-bold rounded-full hover:bg-[#FF2D3B] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(229,9,20,0.3)]"
           >
             <Play className="w-4 h-4" />
             Mulai Belajar
@@ -917,7 +917,7 @@ function CTASection() {
           </p>
           <a
             href="#courses"
-            className="inline-flex items-center gap-2 px-10 py-5 bg-[#E50914] text-black font-bold text-lg rounded-full hover:bg-[#FF2D3B] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(229,9,20,0.3)]"
+            className="inline-flex items-center gap-2 px-10 py-5 bg-[#E50914] text-white font-bold text-lg rounded-full hover:bg-[#FF2D3B] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(229,9,20,0.3)]"
           >
             <Play className="w-5 h-5" />
             Gas Belajar Sekarang

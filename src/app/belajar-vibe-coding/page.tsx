@@ -334,7 +334,7 @@ export default function BelajarVibeCodingPage() {
 
             <Link
               href="/courses/vibe-coding-101"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#E50914] text-black font-bold rounded-full hover:bg-[#FF2D3B] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(229,9,20,0.3)]"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#E50914] text-white font-bold rounded-full hover:bg-[#FF2D3B] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(229,9,20,0.3)]"
             >
               <Play className="w-4 h-4" />
               Mulai Belajar Sekarang
@@ -649,7 +649,7 @@ export default function BelajarVibeCodingPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/courses/vibe-coding-101"
-                className="inline-flex items-center gap-2 px-10 py-5 bg-[#E50914] text-black font-bold text-lg rounded-full hover:bg-[#FF2D3B] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(229,9,20,0.3)]"
+                className="inline-flex items-center gap-2 px-10 py-5 bg-[#E50914] text-white font-bold text-lg rounded-full hover:bg-[#FF2D3B] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(229,9,20,0.3)]"
               >
                 <Play className="w-5 h-5" />
                 Mulai Course Pertama

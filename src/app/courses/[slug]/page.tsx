@@ -280,7 +280,7 @@ export default async function CourseDetailPage({
                     className="w-full flex items-center justify-center gap-2 px-6 py-4 font-bold rounded-full transition-all hover:scale-105"
                     style={{
                       backgroundColor: course.color,
-                      color: "#000",
+                      color: "#fff",
                     }}
                   >
                     <Play className="w-4 h-4" />
