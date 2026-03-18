@@ -84,13 +84,9 @@ export const metadata: Metadata = {
     creator: "@vibengoding",
   },
   verification: {
-    google: "GOOGLE_SITE_VERIFICATION_CODE",
-    // yandex: "YANDEX_VERIFICATION_CODE",
+    // Verified via DNS TXT record
   },
   category: "education",
-  other: {
-    "google-site-verification": "GOOGLE_SITE_VERIFICATION_CODE",
-  },
 };
 
 // JSON-LD Structured Data
