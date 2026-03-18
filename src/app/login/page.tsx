@@ -1,7 +1,7 @@
 "use client"
 
 import { signIn } from "next-auth/react"
-import { Zap } from "lucide-react"
+import { Sparkles } from "lucide-react"
 import { motion } from "motion/react"
 
 export default function LoginPage() {
@@ -20,8 +20,8 @@ export default function LoginPage() {
         <div className="bg-[#111] rounded-2xl border border-[#1a1a1a] p-8 sm:p-10">
           {/* Logo */}
           <div className="flex flex-col items-center mb-8">
-            <div className="w-14 h-14 rounded-2xl bg-[#BFFF00] flex items-center justify-center mb-4">
-              <Zap className="w-7 h-7 text-black" />
+            <div className="w-14 h-14 rounded-2xl bg-[#E50914] flex items-center justify-center mb-4">
+              <span className="text-white font-extrabold text-2xl" style={{ fontFamily: "'Syne', sans-serif" }}>V</span>
             </div>
             <h1 className="text-2xl font-bold tracking-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
               VIBENGODING<span className="text-[#BFFF00]">.ID</span>

@@ -651,7 +651,7 @@ export default function BelajarVibeCodingPage() {
                 href="/courses/vibe-coding-101"
                 className="inline-flex items-center gap-2 px-10 py-5 bg-[#BFFF00] text-black font-bold text-lg rounded-full hover:bg-[#d4ff4d] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(191,255,0,0.3)]"
               >
-                <Zap className="w-5 h-5" />
+                <Play className="w-5 h-5" />
                 Mulai Course Pertama
                 <ArrowRight className="w-5 h-5" />
               </Link>

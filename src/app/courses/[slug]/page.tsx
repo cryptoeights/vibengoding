@@ -10,7 +10,6 @@ import {
   AlertCircle,
   Play,
   ChevronRight,
-  Zap,
 } from "lucide-react";
 
 const siteUrl = "https://vibengoding.id";
@@ -284,7 +283,7 @@ export default async function CourseDetailPage({
                       color: "#000",
                     }}
                   >
-                    <Zap className="w-4 h-4" />
+                    <Play className="w-4 h-4" />
                     Mulai Belajar
                     <ChevronRight className="w-4 h-4" />
                   </Link>
