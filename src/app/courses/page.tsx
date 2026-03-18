@@ -72,7 +72,7 @@ export default function CoursesPage() {
         <div className="max-w-7xl mx-auto px-6 py-16">
           {/* Title */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#BFFF00]/10 border border-[#BFFF00]/20 text-[#BFFF00] text-xs font-mono mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E50914]/10 border border-[#E50914]/20 text-[#E50914] text-xs font-mono mb-4">
               <BookOpen className="w-3.5 h-3.5" />
               {courses.length} COURSES AVAILABLE
             </div>

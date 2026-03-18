@@ -570,7 +570,7 @@ export function TaskForm() {
         name="title"
         placeholder="Apa yang mau kamu kerjakan?"
         className="w-full px-4 py-3 bg-[#111] border border-[#222] rounded-xl 
-          text-white placeholder-gray-600 focus:border-[#BFFF00] focus:outline-none"
+          text-white placeholder-gray-600 focus:border-[#E50914] focus:outline-none"
         required
       />
       
@@ -578,7 +578,7 @@ export function TaskForm() {
         name="description"
         placeholder="Deskripsi (opsional)"
         className="w-full px-4 py-3 bg-[#111] border border-[#222] rounded-xl
-          text-white placeholder-gray-600 focus:border-[#BFFF00] focus:outline-none"
+          text-white placeholder-gray-600 focus:border-[#E50914] focus:outline-none"
         rows={3}
       />
       
@@ -594,7 +594,7 @@ export function TaskForm() {
 
       <button
         type="submit"
-        className="px-6 py-3 bg-[#BFFF00] text-black font-bold rounded-xl hover:bg-[#d4ff4d]"
+        className="px-6 py-3 bg-[#E50914] text-black font-bold rounded-xl hover:bg-[#FF2D3B]"
       >
         Tambah Task
       </button>
@@ -648,7 +648,7 @@ export default async function TasksPage() {
       {/* Progress bar */}
       <div className="w-full h-2 bg-[#1a1a1a] rounded-full mb-8">
         <div
-          className="h-full bg-[#BFFF00] rounded-full transition-all"
+          className="h-full bg-[#E50914] rounded-full transition-all"
           style={{ width: stats.total > 0
             ? \`\${(stats.completed / stats.total) * 100}%\`
             : "0%" }}
@@ -718,8 +718,8 @@ export function TaskList({ tasks }: { tasks: Task[] }) {
             className={\`w-6 h-6 rounded-full border-2 flex items-center justify-center 
               flex-shrink-0 mt-0.5 transition-all
               \${task.completed
-                ? "bg-[#BFFF00] border-[#BFFF00]"
-                : "border-gray-600 hover:border-[#BFFF00]"}\`}
+                ? "bg-[#E50914] border-[#E50914]"
+                : "border-gray-600 hover:border-[#E50914]"}\`}
           >
             {task.completed && <Check className="w-3.5 h-3.5 text-black" />}
           </button>
@@ -859,7 +859,7 @@ export function EditTaskModal({ task, onClose }: EditTaskModalProps) {
               Batal
             </button>
             <button type="submit"
-              className="flex-1 px-4 py-3 bg-[#BFFF00] text-black font-bold rounded-xl">
+              className="flex-1 px-4 py-3 bg-[#E50914] text-black font-bold rounded-xl">
               Simpan
             </button>
           </div>
@@ -1049,7 +1049,7 @@ export function TaskForm() {
       <button
         type="submit"
         disabled={pending}
-        className="px-6 py-3 bg-[#BFFF00] text-black font-bold rounded-xl 
+        className="px-6 py-3 bg-[#E50914] text-black font-bold rounded-xl 
           disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {pending ? "Menyimpan..." : "Tambah Task"}
@@ -1416,7 +1416,7 @@ export function FileUpload({ onUpload }: { onUpload: (url: string) => void }) {
 
   return (
     <label className="flex items-center gap-2 px-4 py-2 border border-dashed 
-      border-gray-700 rounded-xl cursor-pointer hover:border-[#BFFF00] transition-all">
+      border-gray-700 rounded-xl cursor-pointer hover:border-[#E50914] transition-all">
       <Upload className="w-4 h-4 text-gray-500" />
       <span className="text-sm text-gray-500">
         {uploading ? "Uploading..." : "Attach file"}
@@ -1633,7 +1633,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="px-6 py-3 bg-[#BFFF00] text-black font-bold rounded-xl
+      className="px-6 py-3 bg-[#E50914] text-black font-bold rounded-xl
         disabled:opacity-50 transition-all flex items-center gap-2"
     >
       {pending ? (
@@ -1669,7 +1669,7 @@ export default function Error({
       <p className="text-gray-500 mb-6">{error.message}</p>
       <button
         onClick={reset}
-        className="px-6 py-3 bg-[#BFFF00] text-black font-bold rounded-xl"
+        className="px-6 py-3 bg-[#E50914] text-black font-bold rounded-xl"
       >
         Coba Lagi
       </button>

@@ -28,7 +28,7 @@ export default async function Image() {
             position: "absolute",
             inset: 0,
             backgroundImage:
-              "linear-gradient(rgba(191,255,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(191,255,0,0.05) 1px, transparent 1px)",
+              "linear-gradient(rgba(229,9,20,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(229,9,20,0.05) 1px, transparent 1px)",
             backgroundSize: "60px 60px",
           }}
         />
@@ -43,7 +43,7 @@ export default async function Image() {
             width: 600,
             height: 600,
             borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(191,255,0,0.08), transparent 70%)",
+            background: "radial-gradient(circle, rgba(229,9,20,0.08), transparent 70%)",
           }}
         />
 
@@ -73,13 +73,13 @@ export default async function Image() {
             style={{
               padding: "8px 20px",
               borderRadius: 100,
-              background: "rgba(191,255,0,0.1)",
-              border: "1px solid rgba(191,255,0,0.2)",
+              background: "rgba(229,9,20,0.1)",
+              border: "1px solid rgba(229,9,20,0.2)",
             }}
           >
             <span
               style={{
-                color: "#BFFF00",
+                color: "#E50914",
                 fontSize: 18,
                 fontWeight: 600,
               }}
@@ -106,11 +106,11 @@ export default async function Image() {
           style={{
             fontSize: 82,
             fontWeight: 900,
-            color: "#BFFF00",
+            color: "#E50914",
             textAlign: "center",
             lineHeight: 1,
             marginBottom: 16,
-            textShadow: "0 0 40px rgba(191,255,0,0.4)",
+            textShadow: "0 0 40px rgba(229,9,20,0.4)",
           }}
         >
           Vibe Coding
@@ -151,7 +151,7 @@ export default async function Image() {
                 style={{
                   fontSize: 36,
                   fontWeight: 800,
-                  color: "#BFFF00",
+                  color: "#E50914",
                 }}
               >
                 {s.val}

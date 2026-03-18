@@ -99,7 +99,7 @@ const steps = [
     num: "01",
     title: "Setup Environment",
     desc: "Install Node.js, Cursor (AI code editor), dan buat akun ChatGPT/Claude. 15 menit setup dan kamu siap mulai.",
-    color: "#BFFF00",
+    color: "#E50914",
   },
   {
     num: "02",
@@ -131,7 +131,7 @@ const courseSummaries = [
     duration: "3 jam",
     level: "Pemula",
     icon: <Sparkles className="w-5 h-5" />,
-    color: "#BFFF00",
+    color: "#E50914",
   },
   {
     slug: "ai-powered-frontend",
@@ -284,17 +284,17 @@ export default function BelajarVibeCodingPage() {
           <div className="max-w-5xl mx-auto px-6 py-4 flex items-center gap-2 text-sm">
             <Link href="/" className="text-[#888] hover:text-white transition-colors">Home</Link>
             <span className="text-[#333]">/</span>
-            <span className="text-[#BFFF00] font-medium">Belajar Vibe Coding</span>
+            <span className="text-[#E50914] font-medium">Belajar Vibe Coding</span>
           </div>
         </nav>
 
         {/* Hero */}
         <header className="relative py-16 sm:py-24 overflow-hidden">
-          <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#BFFF00]/10 rounded-full blur-[120px]" />
+          <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#E50914]/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-[#00D4FF]/5 rounded-full blur-[100px]" />
 
           <div className="relative z-10 max-w-5xl mx-auto px-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#BFFF00]/10 border border-[#BFFF00]/20 text-[#BFFF00] text-xs font-mono mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E50914]/10 border border-[#E50914]/20 text-[#E50914] text-xs font-mono mb-6">
               <BookOpen className="w-3.5 h-3.5" />
               PANDUAN LENGKAP 2026
             </div>
@@ -303,7 +303,7 @@ export default function BelajarVibeCodingPage() {
               style={{ fontFamily: "'Syne', sans-serif" }}
             >
               Belajar{" "}
-              <span className="text-[#BFFF00] glow-text">Vibe Coding</span>
+              <span className="text-[#E50914] glow-text">Vibe Coding</span>
               <br />
               <span className="text-[#888] text-3xl sm:text-4xl lg:text-5xl">Gratis, dari Nol, Bahasa Indonesia</span>
             </h1>
@@ -315,26 +315,26 @@ export default function BelajarVibeCodingPage() {
 
             <div className="flex flex-wrap gap-4 mb-8">
               <div className="flex items-center gap-2 text-sm text-[#aaa]">
-                <Clock className="w-4 h-4 text-[#BFFF00]" />
+                <Clock className="w-4 h-4 text-[#E50914]" />
                 <span>18.5 jam total konten</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-[#aaa]">
-                <BookOpen className="w-4 h-4 text-[#BFFF00]" />
+                <BookOpen className="w-4 h-4 text-[#E50914]" />
                 <span>60+ lessons</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-[#aaa]">
-                <Users className="w-4 h-4 text-[#BFFF00]" />
+                <Users className="w-4 h-4 text-[#E50914]" />
                 <span>Bahasa Indonesia</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-[#aaa]">
-                <Star className="w-4 h-4 text-[#BFFF00]" />
+                <Star className="w-4 h-4 text-[#E50914]" />
                 <span>100% Gratis</span>
               </div>
             </div>
 
             <Link
               href="/courses/vibe-coding-101"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#BFFF00] text-black font-bold rounded-full hover:bg-[#d4ff4d] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(191,255,0,0.3)]"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#E50914] text-black font-bold rounded-full hover:bg-[#FF2D3B] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(229,9,20,0.3)]"
             >
               <Play className="w-4 h-4" />
               Mulai Belajar Sekarang
@@ -350,7 +350,7 @@ export default function BelajarVibeCodingPage() {
               className="text-3xl sm:text-4xl font-bold text-white mb-6"
               style={{ fontFamily: "'Syne', sans-serif" }}
             >
-              Apa Itu <span className="text-[#BFFF00]">Vibe Coding</span>?
+              Apa Itu <span className="text-[#E50914]">Vibe Coding</span>?
             </h2>
             <div className="prose-custom space-y-4 text-[#ccc] leading-relaxed">
               <p className="text-lg">
@@ -385,8 +385,8 @@ export default function BelajarVibeCodingPage() {
                     <li>⏰ Berminggu-minggu untuk MVP</li>
                   </ul>
                 </div>
-                <div className="bg-[#111] rounded-xl border border-[#BFFF00]/20 p-6">
-                  <h3 className="text-[#BFFF00] font-bold mb-3 flex items-center gap-2">
+                <div className="bg-[#111] rounded-xl border border-[#E50914]/20 p-6">
+                  <h3 className="text-[#E50914] font-bold mb-3 flex items-center gap-2">
                     <Sparkles className="w-5 h-5" />
                     Vibe Coding
                   </h3>
@@ -413,7 +413,7 @@ export default function BelajarVibeCodingPage() {
               className="text-3xl sm:text-4xl font-bold text-white mb-6"
               style={{ fontFamily: "'Syne', sans-serif" }}
             >
-              Kenapa Harus Belajar <span className="text-[#BFFF00]">Vibe Coding</span> Sekarang?
+              Kenapa Harus Belajar <span className="text-[#E50914]">Vibe Coding</span> Sekarang?
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
@@ -452,7 +452,7 @@ export default function BelajarVibeCodingPage() {
                   key={i}
                   className="bg-[#111] rounded-xl border border-[#1a1a1a] p-6 hover:border-[#333] transition-all"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-[#BFFF00]/10 text-[#BFFF00] flex items-center justify-center mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-[#E50914]/10 text-[#E50914] flex items-center justify-center mb-4">
                     {item.icon}
                   </div>
                   <h3 className="text-white font-bold mb-2">{item.title}</h3>
@@ -515,9 +515,9 @@ export default function BelajarVibeCodingPage() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="bg-[#111] text-left">
-                    <th className="px-4 py-3 text-[#BFFF00] font-mono font-medium border-b border-[#1a1a1a]">Tool</th>
-                    <th className="px-4 py-3 text-[#BFFF00] font-mono font-medium border-b border-[#1a1a1a]">Fungsi</th>
-                    <th className="px-4 py-3 text-[#BFFF00] font-mono font-medium border-b border-[#1a1a1a]">Harga</th>
+                    <th className="px-4 py-3 text-[#E50914] font-mono font-medium border-b border-[#1a1a1a]">Tool</th>
+                    <th className="px-4 py-3 text-[#E50914] font-mono font-medium border-b border-[#1a1a1a]">Fungsi</th>
+                    <th className="px-4 py-3 text-[#E50914] font-mono font-medium border-b border-[#1a1a1a]">Harga</th>
                   </tr>
                 </thead>
                 <tbody className="text-[#ccc]">
@@ -535,7 +535,7 @@ export default function BelajarVibeCodingPage() {
                       <td className="px-4 py-3 text-white font-medium">{tool}</td>
                       <td className="px-4 py-3">{fungsi}</td>
                       <td className="px-4 py-3">
-                        <span className="text-xs px-2 py-1 rounded-full bg-[#BFFF00]/10 text-[#BFFF00]">
+                        <span className="text-xs px-2 py-1 rounded-full bg-[#E50914]/10 text-[#E50914]">
                           {harga}
                         </span>
                       </td>
@@ -552,7 +552,7 @@ export default function BelajarVibeCodingPage() {
               className="text-3xl sm:text-4xl font-bold text-white mb-4"
               style={{ fontFamily: "'Syne', sans-serif" }}
             >
-              Learning Path: <span className="text-[#BFFF00]">6 Courses Gratis</span>
+              Learning Path: <span className="text-[#E50914]">6 Courses Gratis</span>
             </h2>
             <p className="text-[#888] text-lg mb-10 max-w-2xl">
               Ikuti urutan ini untuk hasil terbaik. Setiap course bisa diakses langsung tanpa signup.
@@ -623,7 +623,7 @@ export default function BelajarVibeCodingPage() {
                 "Best practices vibe coding production",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#BFFF00] flex-shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-[#E50914] flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-[#ccc]">{item}</span>
                 </div>
               ))}
@@ -641,7 +641,7 @@ export default function BelajarVibeCodingPage() {
               className="text-3xl sm:text-5xl font-bold text-white mb-6"
               style={{ fontFamily: "'Syne', sans-serif" }}
             >
-              Siap Mulai <span className="text-[#BFFF00] glow-text">Vibe Coding</span>?
+              Siap Mulai <span className="text-[#E50914] glow-text">Vibe Coding</span>?
             </h2>
             <p className="text-[#888] text-lg mb-10 max-w-lg mx-auto">
               Gratis selamanya, bahasa Indonesia, langsung praktek. Course pertama bisa selesai dalam 3 jam.
@@ -649,7 +649,7 @@ export default function BelajarVibeCodingPage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/courses/vibe-coding-101"
-                className="inline-flex items-center gap-2 px-10 py-5 bg-[#BFFF00] text-black font-bold text-lg rounded-full hover:bg-[#d4ff4d] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(191,255,0,0.3)]"
+                className="inline-flex items-center gap-2 px-10 py-5 bg-[#E50914] text-black font-bold text-lg rounded-full hover:bg-[#FF2D3B] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(229,9,20,0.3)]"
               >
                 <Play className="w-5 h-5" />
                 Mulai Course Pertama
@@ -657,7 +657,7 @@ export default function BelajarVibeCodingPage() {
               </Link>
               <Link
                 href="/courses"
-                className="inline-flex items-center gap-2 px-8 py-4 border border-[#333] text-white font-medium rounded-full hover:border-[#BFFF00]/50 hover:bg-[#BFFF00]/5 transition-all"
+                className="inline-flex items-center gap-2 px-8 py-4 border border-[#333] text-white font-medium rounded-full hover:border-[#E50914]/50 hover:bg-[#E50914]/5 transition-all"
               >
                 Lihat Semua Courses
               </Link>
@@ -673,7 +673,7 @@ export default function BelajarVibeCodingPage() {
                 <span className="text-white font-extrabold text-[10px]" style={{ fontFamily: "'Syne', sans-serif" }}>V</span>
               </div>
               <span className="font-bold" style={{ fontFamily: "'Syne', sans-serif" }}>
-                VIBENGODING<span className="text-[#BFFF00]">.ID</span>
+                VIBENGODING<span className="text-[#E50914]">.ID</span>
               </span>
             </div>
             <p>© {new Date().getFullYear()} VIBENGODING.ID — Semua courses gratis selamanya.</p>

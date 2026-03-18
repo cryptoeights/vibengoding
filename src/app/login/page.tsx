@@ -8,8 +8,8 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center grid-pattern relative overflow-hidden">
       {/* Ambient blobs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#BFFF00]/10 rounded-full blur-[120px] animate-float" />
-      <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-[#BFFF00]/5 rounded-full blur-[100px] animate-float" style={{ animationDelay: "3s" }} />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#E50914]/10 rounded-full blur-[120px] animate-float" />
+      <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-[#E50914]/5 rounded-full blur-[100px] animate-float" style={{ animationDelay: "3s" }} />
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -24,7 +24,7 @@ export default function LoginPage() {
               <span className="text-white font-extrabold text-2xl" style={{ fontFamily: "'Syne', sans-serif" }}>V</span>
             </div>
             <h1 className="text-2xl font-bold tracking-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
-              VIBENGODING<span className="text-[#BFFF00]">.ID</span>
+              VIBENGODING<span className="text-[#E50914]">.ID</span>
             </h1>
             <p className="text-[#888] text-sm mt-2 text-center">
               Masuk untuk akses semua courses dan tools gratis
@@ -67,7 +67,7 @@ export default function LoginPage() {
           {/* Continue without login */}
           <a
             href="/"
-            className="w-full flex items-center justify-center gap-2 px-6 py-3.5 border border-[#333] text-[#888] font-medium rounded-xl hover:border-[#BFFF00]/50 hover:text-white hover:bg-[#BFFF00]/5 transition-all"
+            className="w-full flex items-center justify-center gap-2 px-6 py-3.5 border border-[#333] text-[#888] font-medium rounded-xl hover:border-[#E50914]/50 hover:text-white hover:bg-[#E50914]/5 transition-all"
           >
             Lanjut tanpa login
           </a>

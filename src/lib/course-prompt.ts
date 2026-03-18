@@ -24,7 +24,7 @@ Kesalahan paling umum: memperlakukan AI seperti Google. AI adalah **collaborativ
 ✅ "Buatkan landing page SaaS untuk project management tool.
    Tech: Next.js 14, Tailwind CSS, TypeScript.
    Sections: hero, features (3), pricing (3 tiers), CTA.
-   Style: dark theme, accent color #BFFF00."
+   Style: dark theme, accent color #E50914."
 
 ### 2. Iterate, Don't One-Shot
 
@@ -101,7 +101,7 @@ Tech stack: [TECHNOLOGIES].
 
 Context: Saya membuat e-commerce dengan Next.js 14, Tailwind CSS, 
 dan TypeScript. Design system menggunakan dark theme dengan accent 
-color #BFFF00.
+color #E50914.
 
 Task: Buatkan komponen ProductCard yang menampilkan gambar produk,
 nama, harga, rating (bintang), dan tombol "Add to Cart".
@@ -617,7 +617,7 @@ System prompt = instruksi yang membentuk "kepribadian" dan capability AI. Di Cur
 - File structure: feature-based (not type-based)
 
 ## Design System
-- Theme: dark mode (#050505 bg, #BFFF00 accent)
+- Theme: dark mode (#050505 bg, #E50914 accent)
 - Font: Space Grotesk (sans), JetBrains Mono (mono)
 - Radius: rounded-xl for cards, rounded-full for buttons
 - Shadows: subtle, dark mode appropriate

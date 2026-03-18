@@ -40,7 +40,7 @@ export const courses: Course[] = [
       "Course ini dirancang untuk kamu yang baru banget mau mulai vibe coding. Kita bakal bahas dari A-Z: apa itu vibe coding, kenapa ini game-changer, gimana setup tools-nya, dan cara bikin app pertama kamu tanpa harus jadi expert dulu. Semua pakai pendekatan AI-first yang bikin proses ngoding jadi jauh lebih cepat dan fun.",
     level: "Pemula",
     totalDuration: "3 jam",
-    color: "#BFFF00",
+    color: "#E50914",
     tags: ["AI", "Prompt", "Deploy"],
     prerequisites: ["Laptop/PC dengan internet", "Akun GitHub (gratis)", "Semangat belajar 🔥"],
     whatYoullLearn: [
@@ -295,7 +295,7 @@ Buatkan komponen hero section dengan animasi typing effect.
 - Gunakan TypeScript
 - Mobile responsive
 - Tanpa library tambahan, pure CSS animation
-- Warna tema: dark mode dengan aksen hijau (#BFFF00)
+- Warna tema: dark mode dengan aksen hijau (#E50914)
 
 [FORMAT]
 Berikan kode lengkap dalam satu file komponen React.
@@ -395,7 +395,7 @@ Buatkan file src/app/page.tsx dengan spesifikasi:
 
 3. Design requirements:
    - Dark theme (bg: #0a0a0a)
-   - Accent color: #BFFF00 (lime green)
+   - Accent color: #E50914 (lime green)
    - Mobile-first, max-width 480px centered
    - Font: system font stack
    - Smooth animations on load (stagger effect)
@@ -606,7 +606,7 @@ CSS = penampilan website. Bayangkan seperti pakaian dan makeup.
 \`\`\`css
 /* Selector dasar */
 h1 {
-  color: #BFFF00;
+  color: #E50914;
   font-size: 48px;
   font-weight: bold;
 }
@@ -668,7 +668,7 @@ Spacing:  p-4 (padding), m-4 (margin), gap-4
 Flex:     flex, items-center, justify-between
 Grid:     grid, grid-cols-3, gap-6
 Text:     text-xl, font-bold, text-white
-Color:    bg-black, text-[#BFFF00], border-gray-800
+Color:    bg-black, text-[#E50914], border-gray-800
 Rounded:  rounded-lg, rounded-xl, rounded-full
 Shadow:   shadow-lg, shadow-xl
 Hover:    hover:bg-gray-800, hover:scale-105
@@ -1135,20 +1135,20 @@ Prefix: \`sm:\` (640px), \`md:\` (768px), \`lg:\` (1024px), \`xl:\` (1280px)
 \`\`\`tsx
 // Hover effects
 <button className="
-  bg-[#BFFF00] text-black px-6 py-3 rounded-full
-  hover:bg-[#d4ff4d] hover:scale-105
+  bg-[#E50914] text-black px-6 py-3 rounded-full
+  hover:bg-[#FF2D3B] hover:scale-105
   transition-all duration-300
 ">
   Hover me!
 </button>
 
 // Custom value (arbitrary)
-<div className="bg-[#111] text-[#BFFF00] border-[1px] rounded-[20px]">
+<div className="bg-[#111] text-[#E50914] border-[1px] rounded-[20px]">
   Custom values
 </div>
 
 // Gradient
-<div className="bg-gradient-to-r from-[#BFFF00] to-[#00ff88]">
+<div className="bg-gradient-to-r from-[#E50914] to-[#00ff88]">
   Gradient
 </div>
 \`\`\`
@@ -1156,7 +1156,7 @@ Prefix: \`sm:\` (640px), \`md:\` (768px), \`lg:\` (1024px), \`xl:\` (1280px)
 ## Tips
 
 1. **Install Tailwind IntelliSense** di VS Code — autocomplete classes
-2. Pakai **arbitrary values** \`[#BFFF00]\` untuk warna custom
+2. Pakai **arbitrary values** \`[#E50914]\` untuk warna custom
 3. **Mobile first** — mulai styling untuk mobile, tambahkan responsive prefix
 4. Minta AI generate Tailwind — tapi tetap review hasilnya!
 
@@ -1332,7 +1332,7 @@ Hierarchy tools:
 <div>
   <h1 className="text-5xl font-bold text-white">Main Message</h1>
   <p className="text-lg text-gray-400 mt-4">Supporting description</p>
-  <button className="mt-8 px-8 py-4 bg-[#BFFF00] text-black font-bold text-lg rounded-full">
+  <button className="mt-8 px-8 py-4 bg-[#E50914] text-black font-bold text-lg rounded-full">
     Primary CTA
   </button>
   <button className="mt-4 text-gray-500 text-sm underline">
@@ -1533,8 +1533,8 @@ function Button({
   const baseStyles = "font-semibold rounded-full transition-all inline-flex items-center gap-2";
   
   const variants = {
-    primary: "bg-[#BFFF00] text-black hover:bg-[#d4ff4d] hover:scale-105",
-    secondary: "border border-gray-700 text-white hover:border-[#BFFF00]/50",
+    primary: "bg-[#E50914] text-black hover:bg-[#FF2D3B] hover:scale-105",
+    secondary: "border border-gray-700 text-white hover:border-[#E50914]/50",
     ghost: "text-gray-400 hover:text-white",
   };
 
@@ -1781,7 +1781,7 @@ import { motion } from "motion/react";
 <motion.button
   whileHover={{ scale: 1.05 }}
   whileTap={{ scale: 0.95 }}
-  className="px-6 py-3 bg-[#BFFF00] text-black rounded-full font-bold"
+  className="px-6 py-3 bg-[#E50914] text-black rounded-full font-bold"
 >
   Click me!
 </motion.button>
@@ -1834,7 +1834,7 @@ Animasi adalah polish yang membedakan website biasa dari website yang memorable!
   --text: #111111;
   --card: #f5f5f5;
   --border: #e5e5e5;
-  --accent: #BFFF00;
+  --accent: #E50914;
 }
 
 .dark {
@@ -1842,7 +1842,7 @@ Animasi adalah polish yang membedakan website biasa dari website yang memorable!
   --text: #fafafa;
   --card: #111111;
   --border: #1a1a1a;
-  --accent: #BFFF00;
+  --accent: #E50914;
 }
 
 body {
@@ -1912,7 +1912,7 @@ Text hierarchy:
 - Muted:      #555555 (dimmed)
 
 Accents stay bright:
-- CTA:        #BFFF00 (lime)
+- CTA:        #E50914 (lime)
 - Links:      #00D4FF (cyan)
 - Error:      #ff4444
 - Success:    #00cc66
@@ -2036,7 +2036,7 @@ export const theme = {
   colors: {
     bg: { primary: "#050505", secondary: "#111", tertiary: "#1a1a1a" },
     text: { primary: "#fafafa", secondary: "#888", muted: "#555" },
-    accent: { lime: "#BFFF00", cyan: "#00D4FF", red: "#ff4444" },
+    accent: { lime: "#E50914", cyan: "#00D4FF", red: "#ff4444" },
     border: { default: "#1a1a1a", hover: "#333" },
   },
   spacing: { xs: "4px", sm: "8px", md: "16px", lg: "24px", xl: "32px", "2xl": "48px" },
@@ -2053,14 +2053,14 @@ Detail kecil yang bikin beda:
 // Link dengan animated underline
 <a className="relative group">
   Link Text
-  <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#BFFF00] 
+  <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#E50914] 
     group-hover:w-full transition-all duration-300" />
 </a>
 
 // Card dengan gradient border on hover
 <div className="relative p-[1px] rounded-xl bg-gradient-to-r 
   from-transparent via-transparent to-transparent
-  hover:from-[#BFFF00]/30 hover:to-[#00D4FF]/30 
+  hover:from-[#E50914]/30 hover:to-[#00D4FF]/30 
   transition-all duration-500">
   <div className="bg-[#111] rounded-xl p-6">
     Content
@@ -2068,7 +2068,7 @@ Detail kecil yang bikin beda:
 </div>
 
 // Button with glow effect
-<button className="px-8 py-4 bg-[#BFFF00] text-black font-bold rounded-full
+<button className="px-8 py-4 bg-[#E50914] text-black font-bold rounded-full
   hover:shadow-[0_0_40px_rgba(191,255,0,0.3)]
   transition-all duration-300">
   Glowing Button

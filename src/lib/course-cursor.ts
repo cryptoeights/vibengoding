@@ -314,7 +314,7 @@ Composer akan:
 
 \`\`\`
 @codebase
-"Refactor semua hardcoded color values (#BFFF00, #111, etc) 
+"Refactor semua hardcoded color values (#E50914, #111, etc) 
 menjadi CSS variables. Update:
 - globals.css: define variables
 - All components: use var(--color-name)"
@@ -412,7 +412,7 @@ Buat file \`.cursorrules\` di root project:
 
 ## Style
 - Dark theme: bg-[#050505], cards bg-[#111]
-- Accent: #BFFF00 (lime green)
+- Accent: #E50914 (lime green)
 - Font: Space Grotesk (sans), JetBrains Mono (mono)
 - Rounded corners: rounded-xl for cards
 

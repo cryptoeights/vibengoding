@@ -92,7 +92,7 @@ function MarkdownContent({ content }: { content: string }) {
       elements.push(
         <blockquote
           key={key++}
-          className="my-4 pl-4 border-l-2 border-[#BFFF00]/50 text-[#aaa] italic"
+          className="my-4 pl-4 border-l-2 border-[#E50914]/50 text-[#aaa] italic"
         >
           {quoteLines.map((ql, qi) => (
             <p key={qi} className="mb-1">
@@ -129,7 +129,7 @@ function MarkdownContent({ content }: { content: string }) {
                 {headers.map((h, hi) => (
                   <th
                     key={hi}
-                    className="text-left px-4 py-3 text-[#BFFF00] font-mono font-medium border-b border-[#1a1a1a]"
+                    className="text-left px-4 py-3 text-[#E50914] font-mono font-medium border-b border-[#1a1a1a]"
                   >
                     {h}
                   </th>
@@ -164,7 +164,7 @@ function MarkdownContent({ content }: { content: string }) {
         <ul key={key++} className="my-3 space-y-2">
           {listItems.map((li, liIdx) => (
             <li key={liIdx} className="flex items-start gap-2 text-[#ccc] text-sm leading-relaxed">
-              <span className="text-[#BFFF00] mt-1.5 text-xs">●</span>
+              <span className="text-[#E50914] mt-1.5 text-xs">●</span>
               <span>{renderInline(li)}</span>
             </li>
           ))}
@@ -184,7 +184,7 @@ function MarkdownContent({ content }: { content: string }) {
         <ol key={key++} className="my-3 space-y-2">
           {listItems.map((li, liIdx) => (
             <li key={liIdx} className="flex items-start gap-3 text-[#ccc] text-sm leading-relaxed">
-              <span className="text-[#BFFF00] font-mono font-bold text-xs mt-0.5 w-5 flex-shrink-0">
+              <span className="text-[#E50914] font-mono font-bold text-xs mt-0.5 w-5 flex-shrink-0">
                 {liIdx + 1}.
               </span>
               <span>{renderInline(li)}</span>
@@ -258,7 +258,7 @@ function renderInline(text: string): React.ReactNode {
       parts.push(
         <code
           key={idx++}
-          className="px-1.5 py-0.5 bg-[#1a1a1a] rounded text-[#BFFF00] text-xs font-mono"
+          className="px-1.5 py-0.5 bg-[#1a1a1a] rounded text-[#E50914] text-xs font-mono"
         >
           {first.match![1]}
         </code>
@@ -269,7 +269,7 @@ function renderInline(text: string): React.ReactNode {
         <a
           key={idx++}
           href={first.match![2]}
-          className="text-[#BFFF00] underline underline-offset-2 hover:text-[#d4ff4d] transition-colors"
+          className="text-[#E50914] underline underline-offset-2 hover:text-[#FF2D3B] transition-colors"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -391,13 +391,13 @@ export default function LessonPage() {
                     href={`/courses/${course.slug}/${l.id}`}
                     className={`flex items-start gap-3 px-3 py-2.5 rounded-lg text-xs transition-all ${
                       isCurrent
-                        ? "bg-[#BFFF00]/10 text-[#BFFF00]"
+                        ? "bg-[#E50914]/10 text-[#E50914]"
                         : "text-[#888] hover:text-white hover:bg-[#111]"
                     }`}
                   >
                     <span
                       className={`font-mono font-bold mt-0.5 w-5 flex-shrink-0 ${
-                        isCurrent ? "text-[#BFFF00]" : "text-[#555]"
+                        isCurrent ? "text-[#E50914]" : "text-[#555]"
                       }`}
                     >
                       {String(idx + 1).padStart(2, "0")}

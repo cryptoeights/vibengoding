@@ -226,7 +226,7 @@ export default async function CourseDetailPage({
 
                     {/* Info */}
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-sm font-medium text-white group-hover:text-[#BFFF00] transition-colors truncate">
+                      <h3 className="text-sm font-medium text-white group-hover:text-[#E50914] transition-colors truncate">
                         {lesson.title}
                       </h3>
                       <span className="text-xs text-[#666] flex items-center gap-1 mt-1">

@@ -46,7 +46,7 @@ const courses = [
     duration: "3 jam",
     level: "Pemula",
     icon: <Sparkles className="w-5 h-5" />,
-    color: "#BFFF00",
+    color: "#E50914",
     tags: ["AI", "Prompt", "Deploy"],
   },
   {
@@ -193,7 +193,7 @@ function Navbar() {
             <span className="text-white font-extrabold text-sm" style={{ fontFamily: "'Syne', sans-serif" }}>V</span>
           </div>
           <span className="font-bold text-lg tracking-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
-            VIBENGODING<span className="text-[#BFFF00]">.ID</span>
+            VIBENGODING<span className="text-[#E50914]">.ID</span>
           </span>
         </a>
 
@@ -208,7 +208,7 @@ function Navbar() {
               className="text-sm text-[#888] hover:text-white transition-colors relative group"
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#BFFF00] group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#E50914] group-hover:w-full transition-all duration-300" />
             </a>
           ))}
           {session?.user ? (
@@ -218,7 +218,7 @@ function Navbar() {
                   <img
                     src={session.user.image}
                     alt={session.user.name || ""}
-                    className="w-8 h-8 rounded-full border-2 border-[#BFFF00]/50"
+                    className="w-8 h-8 rounded-full border-2 border-[#E50914]/50"
                   />
                 )}
                 <span className="text-sm text-white font-medium hidden lg:block max-w-[120px] truncate">
@@ -235,7 +235,7 @@ function Navbar() {
           ) : (
             <button
               onClick={() => signIn("google")}
-              className="px-5 py-2 bg-[#BFFF00] text-black text-sm font-semibold rounded-full hover:bg-[#d4ff4d] transition-all hover:scale-105 cursor-pointer"
+              className="px-5 py-2 bg-[#E50914] text-black text-sm font-semibold rounded-full hover:bg-[#FF2D3B] transition-all hover:scale-105 cursor-pointer"
             >
               Masuk
             </button>
@@ -291,7 +291,7 @@ function Navbar() {
               ) : (
                 <button
                   onClick={() => { signIn("google"); setIsOpen(false); }}
-                  className="px-5 py-3 bg-[#BFFF00] text-black text-sm font-semibold rounded-full text-center hover:bg-[#d4ff4d] transition-all cursor-pointer"
+                  className="px-5 py-3 bg-[#E50914] text-black text-sm font-semibold rounded-full text-center hover:bg-[#FF2D3B] transition-all cursor-pointer"
                 >
                   Masuk dengan Google
                 </button>
@@ -324,9 +324,9 @@ function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center grid-pattern overflow-hidden">
       {/* Ambient blobs */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#BFFF00]/10 rounded-full blur-[120px] animate-float" />
-      <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-[#BFFF00]/5 rounded-full blur-[100px] animate-float" style={{ animationDelay: "3s" }} />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#BFFF00]/[0.02] rounded-full blur-[80px]" />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-[#E50914]/10 rounded-full blur-[120px] animate-float" />
+      <div className="absolute bottom-1/4 -right-32 w-80 h-80 bg-[#E50914]/5 rounded-full blur-[100px] animate-float" style={{ animationDelay: "3s" }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#E50914]/[0.02] rounded-full blur-[80px]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         {/* Badge */}
@@ -334,10 +334,10 @@ function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#BFFF00]/10 border border-[#BFFF00]/20 mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#E50914]/10 border border-[#E50914]/20 mb-8"
         >
-          <span className="w-2 h-2 rounded-full bg-[#BFFF00] animate-pulse" />
-          <span className="text-[#BFFF00] text-sm font-medium">100% Free — No BS, No Paywall</span>
+          <span className="w-2 h-2 rounded-full bg-[#E50914] animate-pulse" />
+          <span className="text-[#E50914] text-sm font-medium">100% Free — No BS, No Paywall</span>
         </motion.div>
 
         {/* Title */}
@@ -350,7 +350,7 @@ function HeroSection() {
         >
           <span className="text-white">Belajar</span>
           <br />
-          <span className="text-[#BFFF00] glow-text">Vibe Coding</span>
+          <span className="text-[#E50914] glow-text">Vibe Coding</span>
           <br />
           <span className="text-[#888] text-4xl sm:text-5xl lg:text-6xl font-bold">
             Gratis. Selamanya.
@@ -383,10 +383,10 @@ function HeroSection() {
               <span className="text-xs text-[#555] ml-2 font-mono">terminal</span>
             </div>
             <div className="px-4 py-4 font-mono text-sm">
-              <span className="text-[#BFFF00]">→</span>{" "}
+              <span className="text-[#E50914]">→</span>{" "}
               <span className="text-[#888]">~</span>{" "}
               <span className="text-white">{typedText}</span>
-              <span className="cursor-blink text-[#BFFF00] ml-0.5">▌</span>
+              <span className="cursor-blink text-[#E50914] ml-0.5">▌</span>
             </div>
           </div>
         </motion.div>
@@ -400,7 +400,7 @@ function HeroSection() {
         >
           <a
             href="#courses"
-            className="group flex items-center gap-2 px-8 py-4 bg-[#BFFF00] text-black font-bold rounded-full hover:bg-[#d4ff4d] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(191,255,0,0.3)]"
+            className="group flex items-center gap-2 px-8 py-4 bg-[#E50914] text-black font-bold rounded-full hover:bg-[#FF2D3B] transition-all hover:scale-105 hover:shadow-[0_0_40px_rgba(229,9,20,0.3)]"
           >
             <Play className="w-4 h-4" />
             Mulai Belajar
@@ -408,7 +408,7 @@ function HeroSection() {
           </a>
           <a
             href="#tools"
-            className="flex items-center gap-2 px-8 py-4 border border-[#333] text-white font-medium rounded-full hover:border-[#BFFF00]/50 hover:bg-[#BFFF00]/5 transition-all"
+            className="flex items-center gap-2 px-8 py-4 border border-[#333] text-white font-medium rounded-full hover:border-[#E50914]/50 hover:bg-[#E50914]/5 transition-all"
           >
             <Wrench className="w-4 h-4" />
             Lihat Tools
@@ -428,7 +428,7 @@ function HeroSection() {
             { value: "FREE", label: "Selamanya" },
           ].map((stat) => (
             <div key={stat.label}>
-              <div className="text-2xl sm:text-3xl font-bold text-[#BFFF00]" style={{ fontFamily: "'Syne', sans-serif" }}>
+              <div className="text-2xl sm:text-3xl font-bold text-[#E50914]" style={{ fontFamily: "'Syne', sans-serif" }}>
                 {stat.value}
               </div>
               <div className="text-xs sm:text-sm text-[#555] mt-1">{stat.label}</div>
@@ -529,7 +529,7 @@ function CoursesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#BFFF00]/10 border border-[#BFFF00]/20 text-[#BFFF00] text-xs font-mono mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E50914]/10 border border-[#E50914]/20 text-[#E50914] text-xs font-mono mb-4">
             <BookOpen className="w-3.5 h-3.5" />
             FREE COURSES
           </div>
@@ -538,7 +538,7 @@ function CoursesSection() {
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
             Semua Course,{" "}
-            <span className="text-[#BFFF00]">Gratis.</span>
+            <span className="text-[#E50914]">Gratis.</span>
           </h2>
           <p className="text-[#888] text-lg max-w-xl mx-auto">
             Gak ada paywall, gak ada tier. Semua materi bisa kamu akses sekarang juga.
@@ -741,7 +741,7 @@ function ToolCard({ tool, index }: { tool: typeof tools[0]; index: number }) {
   const statusColors: Record<string, string> = {
     Stable: "text-green-400 bg-green-400/10 border-green-400/20",
     Beta: "text-yellow-400 bg-yellow-400/10 border-yellow-400/20",
-    New: "text-[#BFFF00] bg-[#BFFF00]/10 border-[#BFFF00]/20",
+    New: "text-[#E50914] bg-[#E50914]/10 border-[#E50914]/20",
     "Coming Soon": "text-[#888] bg-[#888]/10 border-[#888]/20",
   };
 
@@ -754,7 +754,7 @@ function ToolCard({ tool, index }: { tool: typeof tools[0]; index: number }) {
       className="group relative gradient-border bg-[#111] rounded-2xl p-6 hover:bg-[#151515] transition-all duration-300"
     >
       <div className="flex items-start justify-between mb-4">
-        <div className="w-12 h-12 rounded-xl bg-[#BFFF00]/10 text-[#BFFF00] flex items-center justify-center group-hover:scale-110 transition-transform">
+        <div className="w-12 h-12 rounded-xl bg-[#E50914]/10 text-[#E50914] flex items-center justify-center group-hover:scale-110 transition-transform">
           {tool.icon}
         </div>
         <span className={`text-xs px-2.5 py-1 rounded-full border ${statusColors[tool.status]}`}>
@@ -772,7 +772,7 @@ function ToolCard({ tool, index }: { tool: typeof tools[0]; index: number }) {
         href={tool.link}
         target={tool.link.startsWith('/') ? '_blank' : undefined}
         rel={tool.link.startsWith('/') ? 'noopener noreferrer' : undefined}
-        className="inline-flex items-center gap-2 text-sm font-semibold text-[#BFFF00] hover:gap-3 transition-all"
+        className="inline-flex items-center gap-2 text-sm font-semibold text-[#E50914] hover:gap-3 transition-all"
       >
         {tool.status === "Coming Soon" ? "Notify Me" : "Coba Sekarang"}
         <ExternalLink className="w-3.5 h-3.5" />
@@ -785,7 +785,7 @@ function ToolsSection() {
   return (
     <section id="tools" className="relative py-24 sm:py-32">
       {/* Divider glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#BFFF00]/20 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#E50914]/20 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
@@ -795,7 +795,7 @@ function ToolsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#BFFF00]/10 border border-[#BFFF00]/20 text-[#BFFF00] text-xs font-mono mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E50914]/10 border border-[#E50914]/20 text-[#E50914] text-xs font-mono mb-4">
             <Wrench className="w-3.5 h-3.5" />
             DEVELOPER TOOLS
           </div>
@@ -805,7 +805,7 @@ function ToolsSection() {
           >
             Tools yang Gue Bikin,{" "}
             <br className="hidden sm:block" />
-            <span className="text-[#BFFF00]">Buat Lo Semua.</span>
+            <span className="text-[#E50914]">Buat Lo Semua.</span>
           </h2>
           <p className="text-[#888] text-lg max-w-xl mx-auto">
             Open-source tools buat nge-boost produktivitas vibe coding kamu. Pakai, modif, kontribusi.
@@ -826,7 +826,7 @@ function ToolsSection() {
 function AboutSection() {
   return (
     <section id="about" className="relative py-24 sm:py-32">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#BFFF00]/20 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#E50914]/20 to-transparent" />
 
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
@@ -835,7 +835,7 @@ function AboutSection() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#BFFF00]/10 border border-[#BFFF00]/20 text-[#BFFF00] text-xs font-mono mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E50914]/10 border border-[#E50914]/20 text-[#E50914] text-xs font-mono mb-4">
             <Heart className="w-3.5 h-3.5" />
             ABOUT
           </div>
@@ -844,7 +844,7 @@ function AboutSection() {
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
             Kenapa{" "}
-            <span className="text-[#BFFF00]">VIBENGODING</span>?
+            <span className="text-[#E50914]">VIBENGODING</span>?
           </h2>
         </motion.div>
 
@@ -863,7 +863,7 @@ function AboutSection() {
             <p>
               Gue bikin VIBENGODING.ID karena percaya semua orang berhak akses ke
               edukasi berkualitas tanpa harus bayar mahal. Semua course dan tools di sini{" "}
-              <span className="text-[#BFFF00] font-semibold">gratis selamanya</span>.
+              <span className="text-[#E50914] font-semibold">gratis selamanya</span>.
             </p>
             <p>
               Misi kita simpel: bantu developer Indonesia jadi lebih jago, lebih cepat,
@@ -879,7 +879,7 @@ function AboutSection() {
               { icon: <Star className="w-5 h-5" />, title: "Always Free", desc: "Gratis selamanya, no strings attached." },
             ].map((val) => (
               <div key={val.title} className="text-center">
-                <div className="w-10 h-10 rounded-xl bg-[#BFFF00]/10 text-[#BFFF00] flex items-center justify-center mx-auto mb-3">
+                <div className="w-10 h-10 rounded-xl bg-[#E50914]/10 text-[#E50914] flex items-center justify-center mx-auto mb-3">
                   {val.icon}
                 </div>
                 <h4 className="font-bold text-white text-sm mb-1">{val.title}</h4>
@@ -897,7 +897,7 @@ function CTASection() {
   return (
     <section className="relative py-24 sm:py-32 overflow-hidden">
       <div className="absolute inset-0 grid-pattern opacity-50" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#BFFF00]/5 rounded-full blur-[120px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#E50914]/5 rounded-full blur-[120px]" />
 
       <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
         <motion.div
@@ -910,14 +910,14 @@ function CTASection() {
             style={{ fontFamily: "'Syne', sans-serif" }}
           >
             Ready to{" "}
-            <span className="text-[#BFFF00] glow-text">Vibe</span>?
+            <span className="text-[#E50914] glow-text">Vibe</span>?
           </h2>
           <p className="text-[#888] text-lg mb-10 max-w-lg mx-auto">
             Mulai perjalanan vibe coding kamu sekarang. Gratis, tanpa signup, langsung gas.
           </p>
           <a
             href="#courses"
-            className="inline-flex items-center gap-2 px-10 py-5 bg-[#BFFF00] text-black font-bold text-lg rounded-full hover:bg-[#d4ff4d] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(191,255,0,0.3)]"
+            className="inline-flex items-center gap-2 px-10 py-5 bg-[#E50914] text-black font-bold text-lg rounded-full hover:bg-[#FF2D3B] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(229,9,20,0.3)]"
           >
             <Play className="w-5 h-5" />
             Gas Belajar Sekarang
@@ -940,7 +940,7 @@ function Footer() {
               <span className="text-white font-extrabold text-xs" style={{ fontFamily: "'Syne', sans-serif" }}>V</span>
             </div>
             <span className="font-bold text-sm tracking-tight" style={{ fontFamily: "'Syne', sans-serif" }}>
-              VIBENGODING<span className="text-[#BFFF00]">.ID</span>
+              VIBENGODING<span className="text-[#E50914]">.ID</span>
             </span>
           </div>
 
@@ -955,10 +955,10 @@ function Footer() {
 
           {/* Socials */}
           <div className="flex items-center gap-4">
-            <a href="#" className="text-[#666] hover:text-[#BFFF00] transition-colors">
+            <a href="#" className="text-[#666] hover:text-[#E50914] transition-colors">
               <Github className="w-5 h-5" />
             </a>
-            <a href="#" className="text-[#666] hover:text-[#BFFF00] transition-colors">
+            <a href="#" className="text-[#666] hover:text-[#E50914] transition-colors">
               <Twitter className="w-5 h-5" />
             </a>
           </div>
@@ -966,7 +966,7 @@ function Footer() {
 
         <div className="mt-8 pt-8 border-t border-[#1a1a1a] text-center">
           <p className="text-xs text-[#444]">
-            Built with <Heart className="w-3 h-3 inline text-[#BFFF00]" /> and vibes.
+            Built with <Heart className="w-3 h-3 inline text-[#E50914]" /> and vibes.
             © {new Date().getFullYear()} VIBENGODING.ID — All courses are free forever.
           </p>
         </div>

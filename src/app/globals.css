@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --lime: #BFFF00;
-  --lime-dim: #8FBF00;
+  --lime: #E50914;
+  --lime-dim: #B3070F;
   --dark: #0A0A0A;
   --darker: #050505;
   --card: #111111;
@@ -51,11 +51,11 @@ body::before {
 
 /* Glow effects */
 .glow-lime {
-  box-shadow: 0 0 40px rgba(191, 255, 0, 0.15), 0 0 80px rgba(191, 255, 0, 0.05);
+  box-shadow: 0 0 40px rgba(229, 9, 20, 0.15), 0 0 80px rgba(229, 9, 20, 0.05);
 }
 
 .glow-text {
-  text-shadow: 0 0 40px rgba(191, 255, 0, 0.4), 0 0 80px rgba(191, 255, 0, 0.1);
+  text-shadow: 0 0 40px rgba(229, 9, 20, 0.4), 0 0 80px rgba(229, 9, 20, 0.1);
 }
 
 .gradient-border {
@@ -68,7 +68,7 @@ body::before {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(191, 255, 0, 0.3), transparent, rgba(191, 255, 0, 0.1));
+  background: linear-gradient(135deg, rgba(229, 9, 20, 0.3), transparent, rgba(229, 9, 20, 0.1));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -98,8 +98,8 @@ body::before {
 /* Grid pattern bg */
 .grid-pattern {
   background-image:
-    linear-gradient(rgba(191, 255, 0, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(191, 255, 0, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(229, 9, 20, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(229, 9, 20, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -110,6 +110,6 @@ html {
 
 /* Selection color */
 ::selection {
-  background: rgba(191, 255, 0, 0.3);
+  background: rgba(229, 9, 20, 0.3);
   color: #fff;
 }
