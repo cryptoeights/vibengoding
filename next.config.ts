@@ -1,7 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async rewrites() {
+    return [
+      {
+        source: "/promptkit",
+        destination: "/promptkit/index.html",
+      },
+      {
+        source: "/promptkit/",
+        destination: "/promptkit/index.html",
+      },
+    ];
+  },
 };
 
 export default nextConfig;
