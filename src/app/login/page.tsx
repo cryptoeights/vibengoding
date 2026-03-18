@@ -1,10 +1,15 @@
 "use client"
 
 import { signIn } from "next-auth/react"
-import { Sparkles } from "lucide-react"
+import { useSearchParams } from "next/navigation"
 import { motion } from "motion/react"
+import { Lock, BookOpen, Wrench, Sparkles } from "lucide-react"
+import { Suspense } from "react"
 
-export default function LoginPage() {
+function LoginForm() {
+  const searchParams = useSearchParams()
+  const callbackUrl = searchParams.get("callbackUrl") || "/"
+
   return (
     <div className="min-h-screen flex items-center justify-center grid-pattern relative overflow-hidden">
       {/* Ambient blobs */}
@@ -19,7 +24,7 @@ export default function LoginPage() {
       >
         <div className="bg-[#111] rounded-2xl border border-[#1a1a1a] p-8 sm:p-10">
           {/* Logo */}
-          <div className="flex flex-col items-center mb-8">
+          <div className="flex flex-col items-center mb-6">
             <div className="w-14 h-14 rounded-2xl bg-[#E50914] flex items-center justify-center mb-4">
               <span className="text-white font-extrabold text-2xl" style={{ fontFamily: "'Syne', sans-serif" }}>V</span>
             </div>
@@ -27,13 +32,33 @@ export default function LoginPage() {
               VIBENGODING<span className="text-[#E50914]">.ID</span>
             </h1>
             <p className="text-[#888] text-sm mt-2 text-center">
-              Masuk untuk akses semua courses dan tools gratis
+              Login dulu untuk akses courses dan tools
             </p>
+          </div>
+
+          {/* Benefits */}
+          <div className="bg-[#0a0a0a] rounded-xl border border-[#1a1a1a] p-4 mb-6 space-y-3">
+            <div className="flex items-center gap-3 text-sm">
+              <BookOpen className="w-4 h-4 text-[#E50914] shrink-0" />
+              <span className="text-[#aaa]">Akses <strong className="text-white">6 courses</strong> lengkap gratis</span>
+            </div>
+            <div className="flex items-center gap-3 text-sm">
+              <Wrench className="w-4 h-4 text-[#E50914] shrink-0" />
+              <span className="text-[#aaa]">Gunakan <strong className="text-white">developer tools</strong> siap pakai</span>
+            </div>
+            <div className="flex items-center gap-3 text-sm">
+              <Sparkles className="w-4 h-4 text-[#E50914] shrink-0" />
+              <span className="text-[#aaa]">Track <strong className="text-white">progress belajar</strong> kamu</span>
+            </div>
+            <div className="flex items-center gap-3 text-sm">
+              <Lock className="w-4 h-4 text-[#E50914] shrink-0" />
+              <span className="text-[#aaa]">100% <strong className="text-white">gratis selamanya</strong>, no paywall</span>
+            </div>
           </div>
 
           {/* Google Sign In */}
           <button
-            onClick={() => signIn("google", { callbackUrl: "/" })}
+            onClick={() => signIn("google", { callbackUrl })}
             className="w-full flex items-center justify-center gap-3 px-6 py-3.5 bg-white text-black font-semibold rounded-xl hover:bg-gray-100 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -57,21 +82,6 @@ export default function LoginPage() {
             Masuk dengan Google
           </button>
 
-          {/* Divider */}
-          <div className="flex items-center gap-4 my-6">
-            <div className="flex-1 h-[1px] bg-[#1a1a1a]" />
-            <span className="text-xs text-[#555]">atau</span>
-            <div className="flex-1 h-[1px] bg-[#1a1a1a]" />
-          </div>
-
-          {/* Continue without login */}
-          <a
-            href="/"
-            className="w-full flex items-center justify-center gap-2 px-6 py-3.5 border border-[#333] text-[#888] font-medium rounded-xl hover:border-[#E50914]/50 hover:text-white hover:bg-[#E50914]/5 transition-all"
-          >
-            Lanjut tanpa login
-          </a>
-
           <p className="text-[10px] text-[#444] text-center mt-6 leading-relaxed">
             Dengan masuk, kamu setuju dengan ketentuan layanan kami.
             <br />Semua courses tetap gratis selamanya. 🎉
@@ -79,5 +89,17 @@ export default function LoginPage() {
         </div>
       </motion.div>
     </div>
+  )
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-[#050505]">
+        <div className="w-8 h-8 border-2 border-[#E50914] border-t-transparent rounded-full animate-spin" />
+      </div>
+    }>
+      <LoginForm />
+    </Suspense>
   )
 }
