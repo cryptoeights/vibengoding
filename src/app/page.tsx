@@ -947,6 +947,7 @@ function Footer() {
           {/* Links */}
           <div className="flex items-center gap-6 text-sm text-[#666]">
             <a href="#courses" className="hover:text-white transition-colors">Courses</a>
+            <Link href="/belajar-vibe-coding" className="hover:text-white transition-colors">Panduan</Link>
             <a href="/promptkit/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">PromptKit</a>
             <a href="#tools" className="hover:text-white transition-colors">Tools</a>
             <a href="#about" className="hover:text-white transition-colors">About</a>

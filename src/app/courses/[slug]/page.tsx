@@ -1,4 +1,5 @@
-import { getCourseBySlug } from "@/lib/courses-data";
+import type { Metadata } from "next";
+import { getCourseBySlug, courses } from "@/lib/courses-data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
@@ -12,6 +13,41 @@ import {
   Zap,
 } from "lucide-react";
 
+const siteUrl = "https://vibengoding.id";
+
+// Generate static params for SSG
+export function generateStaticParams() {
+  return courses.map((course) => ({
+    slug: course.slug,
+  }));
+}
+
+// Dynamic metadata
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const course = getCourseBySlug(slug);
+
+  if (!course) return { title: "Course Not Found" };
+
+  return {
+    title: `${course.title} — ${course.subtitle} | Course Gratis`,
+    description: `${course.longDescription} ${course.lessons.length} lessons, ${course.totalDuration}. Gratis, bahasa Indonesia.`,
+    alternates: {
+      canonical: `${siteUrl}/courses/${slug}`,
+    },
+    openGraph: {
+      title: `${course.title} — ${course.subtitle}`,
+      description: course.description,
+      url: `${siteUrl}/courses/${slug}`,
+      type: "article",
+    },
+  };
+}
+
 export default async function CourseDetailPage({
   params,
 }: {
@@ -22,7 +58,45 @@ export default async function CourseDetailPage({
 
   if (!course) return notFound();
 
+  const courseSchema = {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: `${course.title} — ${course.subtitle}`,
+    description: course.longDescription,
+    provider: { "@type": "Organization", name: "VIBENGODING.ID", url: siteUrl },
+    url: `${siteUrl}/courses/${slug}`,
+    isAccessibleForFree: true,
+    inLanguage: "id",
+    courseMode: "online",
+    educationalLevel: course.level === "Pemula" ? "Beginner" : course.level === "Menengah" ? "Intermediate" : "AllLevels",
+    numberOfLessons: course.lessons.length,
+    hasCourseInstance: {
+      "@type": "CourseInstance",
+      courseMode: "online",
+      courseWorkload: course.totalDuration,
+    },
+    offers: { "@type": "Offer", price: "0", priceCurrency: "IDR", availability: "https://schema.org/InStock" },
+    syllabusSections: course.lessons.map((l, i) => ({
+      "@type": "Syllabus",
+      name: `Lesson ${i + 1}: ${l.title}`,
+      timeRequired: l.duration,
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+      { "@type": "ListItem", position: 2, name: "Courses", item: `${siteUrl}/courses` },
+      { "@type": "ListItem", position: 3, name: course.title, item: `${siteUrl}/courses/${slug}` },
+    ],
+  };
+
   return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
     <main className="min-h-screen">
       {/* Breadcrumb */}
       <div className="border-b border-[#1a1a1a]">
@@ -271,5 +345,6 @@ export default async function CourseDetailPage({
         </div>
       </div>
     </main>
+    </>
   );
 }
