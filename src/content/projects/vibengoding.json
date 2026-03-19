@@ -1,0 +1,98 @@
+{
+  "slug": "vibengoding",
+  "title": "VIBENGODING.ID",
+  "subtitle": "Platform Belajar Vibe Coding Gratis",
+  "description": "Website edukasi vibe coding bahasa Indonesia. Berisi courses gratis, tools developer, dan panduan lengkap coding dengan AI. Dibangun dengan Next.js 16, Tailwind CSS v4, dan NextAuth.",
+  "date": "2025-03-01",
+  "status": "in-progress",
+  "techStack": ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "NextAuth", "Framer Motion"],
+  "aiTools": ["Claude Code", "Cursor"],
+  "category": "web",
+  "demoUrl": "https://vibengoding.id",
+  "localPath": "~/Desktop/Portofolio/vibengoding",
+  "icon": "🔥",
+  "color": "#E50914",
+  "features": [
+    "6 courses gratis dengan 60+ lessons",
+    "Sistem auth dengan Google via NextAuth",
+    "Lesson viewer dengan progress tracking",
+    "PromptKit integration sebagai sub-app",
+    "SEO optimized dengan JSON-LD structured data",
+    "Responsive dark mode UI dengan grain texture",
+    "Google Analytics 4 tracking"
+  ],
+  "masterPrompt": "Buatkan website edukasi VIBENGODING.ID — platform belajar vibe coding gratis untuk developer Indonesia.\n\n## Tech Stack\n- Next.js 16 (App Router) + React 19 + TypeScript\n- Tailwind CSS v4 (@theme inline, dark mode)\n- NextAuth v5 (beta) dengan Google OAuth\n- Framer Motion untuk animasi\n- Lucide React untuk icons\n- Google Analytics 4\n\n## Design System\nDark mode ultra gelap:\n- Background: #050505, Card: #111111, Border: #1a1a1a\n- Accent: Merah #E50914\n- Font: Syne (heading bold), Space Grotesk (body), JetBrains Mono (code)\n- Efek: grain texture overlay (SVG noise), glow effects, gradient borders\n- Grid pattern background di hero\n- Selection color merah\n- Scrollbar thin custom\n\n## Halaman & Fitur\n\n### 1. Landing Page (/)\nSections dengan scroll animations (Framer Motion whileInView):\n\n**Navbar:**\n- Fixed top, backdrop-blur on scroll\n- Logo \"V\" merah + \"VIBENGODING.ID\"\n- Links: Courses, Projects, PromptKit, Tools, About\n- Auth: tombol \"Masuk\" → Google Sign In, atau avatar + nama user + \"Keluar\"\n- Mobile: hamburger menu dengan AnimatePresence\n\n**Hero:**\n- Badge: \"100% Free — No BS, No Paywall\" dengan dot pulse\n- Judul besar font Syne: \"Belajar Vibe Coding\" (merah glow) + \"Gratis. Selamanya.\"\n- Subtitle deskriptif\n- Terminal mockup: typing animation \"npx vibengoding init --vibe 🔥\" (karakter per 60ms)\n- 2 CTA buttons: \"Mulai Belajar\" (merah solid) + \"Lihat Tools\" (border)\n- Stats: 6+ Courses, 60+ Lessons, FREE Selamanya\n- Ambient blur blobs merah + bottom fade gradient\n\n**Courses Section (#courses):**\n- Badge \"FREE COURSES\" + heading \"Semua Course, Gratis.\"\n- Grid 3 kolom, 6 course cards:\n  1. Vibe Coding 101 — 12 lessons, 3 jam, Pemula, warna #E50914\n  2. AI-Powered Frontend — 8 lessons, 2.5 jam, Menengah, warna #00D4FF\n  3. Full-Stack Vibes — 15 lessons, 5 jam, Menengah, warna #FF6B6B\n  4. Prompt Engineering Pro — 10 lessons, 3.5 jam, Semua Level, warna #C084FC\n  5. Ship It! Deploy Guide — 7 lessons, 2 jam, Pemula, warna #FFA726\n  6. Cursor & Copilot Mastery — 9 lessons, 2.5 jam, Semua Level, warna #4ECDC4\n- Setiap card: icon, level badge, title (Syne), subtitle (mono), description, tags (warna per course), footer (lessons count + durasi + tombol \"Mulai\")\n- Card link ke /courses/[slug]\n\n**PromptKit Section:**\n- Featured showcase dengan gradient ungu\n- Info + browser mockup preview di grid 2 kolom\n- Link ke /promptkit/\n\n**Tools Section (#tools):**\n- Grid 2 kolom, 4 tools: VibeGen CLI (Stable), PromptKit (New), VibeUI Components (Beta), DeployBot (Coming Soon)\n- Status badges berwarna\n\n**About Section (#about):**\n- Story card + 3 values: No BS, Community First, Always Free\n\n**CTA Section:**\n- \"Ready to Vibe?\" + tombol besar\n\n**Footer:**\n- Logo + navigation links + GitHub/Twitter icons\n\n### 2. Courses System\n\n**Data-driven:** Setiap course didefinisikan di file TypeScript terpisah:\n- courses-data.ts — index semua courses\n- course-*.ts — konten per course (lessons dengan markdown)\n\n**Course structure:**\n```\nCourse { slug, title, subtitle, description, lessons[], color, icon, tags, level, duration }\nLesson { id, slug, title, duration, content (markdown string) }\n```\n\n**/courses** — List semua courses (grid cards)\n**/courses/[slug]** — Detail course + daftar lessons\n**/courses/[slug]/[lessonId]** — Lesson viewer (perlu auth, proteksi via middleware)\n\n### 3. Auth (NextAuth v5)\n- Google OAuth provider\n- src/auth.ts config\n- app/api/auth/[...nextauth]/route.ts handler\n- SessionProvider wrapper di layout\n- Middleware proteksi route /courses/[slug]/[lessonId]\n- /login page dengan tombol Google\n\n### 4. SEO\n- Metadata lengkap: title template, description, 20+ keywords Bahasa Indonesia\n- JSON-LD: EducationalOrganization, WebSite (SearchAction), ItemList (6 courses)\n- robots.ts: allow all + sitemap\n- sitemap.ts: dynamic dari semua routes\n- opengraph-image.tsx: generated OG image\n- Google Analytics 4 (gtag)\n\nSemua teks UI dalam Bahasa Indonesia. Bahasa casual/santai (lo/gue/kamu).",
+  "steps": [
+    {
+      "step": 1,
+      "title": "Setup Next.js 16 + Auth",
+      "description": "Inisialisasi project Next.js 16 dengan App Router, Tailwind CSS v4, dan NextAuth v5 untuk Google login.",
+      "prompts": [
+        {
+          "title": "Init Next.js Project",
+          "description": "Buat project Next.js baru dengan semua config",
+          "tool": "Terminal",
+          "prompt": "npx create-next-app@latest vibengoding --typescript --tailwind --app --src-dir\ncd vibengoding\nnpm install next-auth@beta motion lucide-react",
+          "category": "setup"
+        },
+        {
+          "title": "NextAuth v5 Setup",
+          "description": "Konfigurasi auth dengan Google provider",
+          "tool": "Claude Code",
+          "prompt": "Setup NextAuth v5 (beta) untuk Next.js 16 App Router:\n- Google OAuth provider\n- File auth.ts di src/\n- Route handler di app/api/auth/[...nextauth]/route.ts\n- SessionProvider wrapper component\n- Middleware untuk proteksi route /courses/[slug]/[lessonId]\n- Login page di /login dengan tombol \"Masuk dengan Google\"",
+          "category": "setup"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Design System & Landing Page",
+      "description": "Buat design system dark mode dengan warna merah (#E50914) dan layout landing page lengkap.",
+      "prompts": [
+        {
+          "title": "Landing Page Sections",
+          "description": "Build semua section landing page",
+          "tool": "Claude Code",
+          "prompt": "Buatkan landing page untuk platform belajar coding gratis VIBENGODING.ID:\n\nDesign: Dark mode sangat gelap (#050505), accent merah (#E50914), font Syne + Space Grotesk + JetBrains Mono\n\nSections:\n1. Navbar — fixed, blur bg on scroll, logo, links, auth button\n2. Hero — badge \"100% Free\", title besar \"Belajar Vibe Coding\", terminal mockup dengan typing animation, CTA buttons, stats\n3. Courses — grid 3 kolom, card dengan color accent per course, tags, lesson count\n4. PromptKit Feature — showcase section khusus dengan browser mockup preview\n5. Tools — grid 2 kolom, status badges (Stable/Beta/New/Coming Soon)\n6. About — story section + 3 values (No BS, Community First, Always Free)\n7. CTA — closing section \"Ready to Vibe?\"\n8. Footer — links + socials\n\nSemua pakai Framer Motion untuk animasi scroll. Bahasa Indonesia.",
+          "category": "component"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Course System & Content",
+      "description": "Build sistem courses dengan data-driven approach. Setiap course punya lessons, dan setiap lesson punya konten lengkap.",
+      "prompts": [
+        {
+          "title": "Course Data Structure",
+          "description": "Bikin data model dan konten courses",
+          "tool": "Claude Code",
+          "prompt": "Buatkan sistem course untuk VIBENGODING.ID:\n\nStruktur data:\n- Course: slug, title, subtitle, description, lessons[], color, icon, tags, level, duration\n- Lesson: id, slug, title, duration, content (markdown string)\n\nBuat data lengkap untuk 6 courses:\n1. Vibe Coding 101 (12 lessons) — dari setup sampai deploy\n2. AI-Powered Frontend (8 lessons) — UI dengan AI\n3. Full-Stack Vibes (15 lessons) — backend + frontend\n4. Prompt Engineering Pro (10 lessons) — master prompting\n5. Ship It! Deploy Guide (7 lessons) — deploy ke production\n6. Cursor & Copilot Mastery (9 lessons) — AI editors\n\nSetiap lesson punya konten markdown lengkap. Bahasa Indonesia.\n\nPages:\n- /courses — list semua courses\n- /courses/[slug] — detail course + list lessons\n- /courses/[slug]/[lessonId] — lesson viewer (perlu auth)",
+          "category": "logic"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "SEO & Performance",
+      "description": "Optimasi SEO dengan metadata, JSON-LD structured data, sitemap, robots.txt, dan Open Graph images.",
+      "prompts": [
+        {
+          "title": "SEO Setup Lengkap",
+          "description": "Metadata, structured data, sitemap",
+          "tool": "Claude Code",
+          "prompt": "Optimasi SEO untuk VIBENGODING.ID (Next.js 16 App Router):\n\n1. Layout metadata — title template, description, keywords bahasa Indonesia (vibe coding, belajar coding gratis, dll), OG image, Twitter card\n2. JSON-LD schemas — EducationalOrganization, WebSite dengan SearchAction, ItemList untuk courses, Course schema per course\n3. robots.ts — allow all, sitemap reference\n4. sitemap.ts — dynamic sitemap dari semua routes + courses\n5. opengraph-image.tsx — generated OG image dengan judul site\n6. Google Analytics 4 — gtag setup di layout\n\nTarget keywords: vibe coding, belajar vibe coding, belajar coding gratis, bikin website pakai AI, prompt engineering, dll.",
+          "category": "setup"
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Next.js 16 App Router + Tailwind v4 dengan @theme inline sangat powerful",
+    "NextAuth v5 beta masih sering berubah — pin versi spesifik",
+    "JSON-LD structured data penting untuk SEO education sites",
+    "Typing animation di hero section sangat meningkatkan engagement",
+    "Grain texture overlay bikin dark mode terasa premium"
+  ],
+  "tags": ["nextjs", "react", "typescript", "tailwind", "auth", "seo", "education", "courses"]
+}

@@ -26,6 +26,7 @@ import { fullStackVibesCourse } from "./course-fullstack";
 import { promptEngineeringLessons } from "./course-prompt";
 import { shipItLessons } from "./course-shipit";
 import { cursorCopilotLessons } from "./course-cursor";
+import { tempoMppLessons } from "./course-tempo-mpp";
 
 export const courses: Course[] = [
   // ===== COURSE 1: Vibe Coding 101 =====
@@ -2193,6 +2194,37 @@ Congratulations! Kamu sudah bisa bikin frontend profesional dengan AI! 🎨✨`,
       "GitHub Copilot tips & tricks",
     ],
     lessons: cursorCopilotLessons,
+  },
+  // ===== COURSE 7: Tempo MPP — Machine Payments for AI Agents =====
+  {
+    id: 7,
+    slug: "tempo-mpp-machine-payments",
+    title: "Tempo MPP",
+    subtitle: "Machine Payments for AI Agents",
+    description:
+      "Belajar bikin AI agent yang bisa bayar sendiri & bangun API berbayar pakai Machine Payments Protocol.",
+    longDescription:
+      "Di course ini kamu akan belajar Tempo & Machine Payments Protocol (MPP) dari nol. Mulai dari setup wallet, buat agent yang bisa bayar layanan otomatis, sampai bangun server API yang terima pembayaran dari agent dan apps. Semuanya step-by-step, bahasa Indonesia, cocok untuk pemula.",
+    level: "Pemula",
+    totalDuration: "3.5 jam",
+    color: "#6366F1",
+    tags: ["Tempo", "MPP", "Agent", "Payments"],
+    prerequisites: [
+      "Laptop/PC dengan internet",
+      "Node.js v18+ terinstall",
+      "Basic JavaScript/TypeScript",
+      "Terminal basics",
+    ],
+    whatYoullLearn: [
+      "Memahami Tempo blockchain & MPP protocol",
+      "Install Tempo CLI & setup wallet",
+      "Membuat AI agent yang bisa bayar otomatis",
+      "Client SDK (TypeScript & Python)",
+      "Membangun server API yang terima MPP payments",
+      "Fee sponsorship & browser wallet integration",
+      "Deploy ke production & go live di mainnet",
+    ],
+    lessons: tempoMppLessons,
   },
 ];
 

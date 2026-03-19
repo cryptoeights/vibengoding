@@ -32,6 +32,10 @@ import {
   Palette,
   Film,
   Camera,
+  DollarSign,
+  TrendingUp,
+  Wallet,
+  BadgeDollarSign,
 } from "lucide-react";
 
 // ========== DATA ==========
@@ -171,6 +175,7 @@ function Navbar() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const links = [
     { href: "#courses", label: "Courses", isExternal: false },
+    { href: "/projects", label: "Projects", isExternal: false },
     { href: "/promptkit/", label: "PromptKit", isExternal: true },
     { href: "#tools", label: "Tools", isExternal: false },
     { href: "#about", label: "About", isExternal: false },
@@ -423,8 +428,8 @@ function HeroSection() {
           className="mt-16 flex items-center justify-center gap-8 sm:gap-16 text-center"
         >
           {[
-            { value: "6+", label: "Courses" },
-            { value: "60+", label: "Lessons" },
+            { value: "7+", label: "Courses" },
+            { value: "70+", label: "Lessons" },
             { value: "FREE", label: "Selamanya" },
           ].map((stat) => (
             <div key={stat.label}>
@@ -549,6 +554,222 @@ function CoursesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((course, i) => (
             <CourseCard key={course.id} course={course} index={i} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function PotensialCuanSection() {
+  const cuanCourses = [
+    {
+      id: 7,
+      slug: "tempo-mpp-machine-payments",
+      title: "Tempo MPP",
+      subtitle: "Machine Payments for AI Agents",
+      description: "Bikin AI agent yang bisa bayar sendiri & bangun API berbayar pakai Machine Payments Protocol. Dari setup wallet sampai deploy mainnet.",
+      lessons: 13,
+      duration: "3.5 jam",
+      level: "Pemula",
+      icon: <Wallet className="w-5 h-5" />,
+      color: "#6366F1",
+      tags: ["Tempo", "MPP", "Agent", "Payments"],
+      earning: "Jual API & Agent Service",
+      available: true,
+    },
+    {
+      id: 101,
+      slug: "saas-dengan-ai",
+      title: "Bikin SaaS dengan AI",
+      subtitle: "Dari Ide Sampai Revenue",
+      description: "Panduan lengkap bangun produk SaaS dari nol pakai AI. Mulai dari validasi ide, MVP, sampai dapet paying customers.",
+      lessons: 0,
+      duration: "Coming soon",
+      level: "Menengah",
+      icon: <TrendingUp className="w-5 h-5" />,
+      color: "#10B981",
+      tags: ["SaaS", "Startup", "AI", "Revenue"],
+      earning: "Recurring Revenue",
+      available: false,
+    },
+    {
+      id: 102,
+      slug: "freelance-ai-developer",
+      title: "Freelance AI Developer",
+      subtitle: "Cuan dari Skill AI Kamu",
+      description: "Cara dapetin klien, pricing strategi, dan deliver project AI sebagai freelancer. Dari Upwork sampai direct clients.",
+      lessons: 0,
+      duration: "Coming soon",
+      level: "Semua Level",
+      icon: <BadgeDollarSign className="w-5 h-5" />,
+      color: "#F59E0B",
+      tags: ["Freelance", "Clients", "Pricing"],
+      earning: "Project-based Income",
+      available: false,
+    },
+    {
+      id: 103,
+      slug: "monetisasi-open-source",
+      title: "Monetisasi Open Source",
+      subtitle: "Cuan dari Code Gratis",
+      description: "Strategi monetisasi project open source. Sponsorship, premium features, consulting, dan model bisnis lainnya.",
+      lessons: 0,
+      duration: "Coming soon",
+      level: "Menengah",
+      icon: <Github className="w-5 h-5" />,
+      color: "#8B5CF6",
+      tags: ["Open Source", "Sponsors", "Business"],
+      earning: "Passive + Active Income",
+      available: false,
+    },
+  ];
+
+  return (
+    <section id="potensial-cuan" className="relative py-24 sm:py-32">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-[#10B981]/30 to-transparent" />
+
+      {/* Ambient */}
+      <div className="absolute top-1/3 -right-32 w-80 h-80 bg-[#10B981]/8 rounded-full blur-[120px] animate-float" />
+      <div className="absolute bottom-1/4 -left-32 w-72 h-72 bg-[#F59E0B]/5 rounded-full blur-[100px] animate-float" style={{ animationDelay: "2s" }} />
+
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#10B981]/10 border border-[#10B981]/20 text-[#10B981] text-xs font-mono mb-4">
+            <DollarSign className="w-3.5 h-3.5" />
+            POTENSIAL CUAN
+          </div>
+          <h2
+            className="text-4xl sm:text-5xl font-bold text-white mb-4"
+            style={{ fontFamily: "'Syne', sans-serif" }}
+          >
+            Belajar <span className="text-[#10B981]">Cuan</span> dari Coding
+          </h2>
+          <p className="text-[#888] text-lg max-w-2xl mx-auto">
+            Course yang ngajarin kamu gimana caranya monetisasi skill coding.
+            Dari jual API, bikin SaaS, freelance, sampai open source — semua ada jalannya.
+          </p>
+        </motion.div>
+
+        {/* Course Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {cuanCourses.map((course, index) => (
+            <motion.div
+              key={course.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              {course.available ? (
+                <Link href={`/courses/${course.slug}`} className="block h-full">
+                  <div className="group relative bg-[#111] rounded-2xl border border-[#1a1a1a] overflow-hidden hover:border-[#333] transition-all duration-500 hover:-translate-y-1 h-full">
+                    <div className="h-[2px] w-full" style={{ background: `linear-gradient(90deg, ${course.color}, transparent)` }} />
+                    <div className="p-6">
+                      <div className="flex items-start justify-between mb-4">
+                        <div
+                          className="w-10 h-10 rounded-xl flex items-center justify-center"
+                          style={{ backgroundColor: `${course.color}15`, color: course.color }}
+                        >
+                          {course.icon}
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs px-3 py-1 rounded-full bg-[#1a1a1a] text-[#888] border border-[#222]">
+                            {course.level}
+                          </span>
+                        </div>
+                      </div>
+                      <h3 className="text-lg font-bold text-white mb-1" style={{ fontFamily: "'Syne', sans-serif" }}>
+                        {course.title}
+                      </h3>
+                      <p className="text-xs text-[#666] mb-3 font-mono">{course.subtitle}</p>
+                      <p className="text-sm text-[#888] leading-relaxed mb-4">{course.description}</p>
+
+                      {/* Earning badge */}
+                      <div className="flex items-center gap-2 mb-4 px-3 py-2 bg-[#10B981]/5 rounded-lg border border-[#10B981]/15">
+                        <TrendingUp className="w-3.5 h-3.5 text-[#10B981]" />
+                        <span className="text-xs font-semibold text-[#10B981]">{course.earning}</span>
+                      </div>
+
+                      <div className="flex flex-wrap gap-2 mb-5">
+                        {course.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="text-xs px-2 py-1 rounded-md font-mono"
+                            style={{ backgroundColor: `${course.color}10`, color: course.color }}
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex items-center justify-between pt-4 border-t border-[#1a1a1a]">
+                        <div className="flex items-center gap-4 text-xs text-[#666]">
+                          <span className="flex items-center gap-1">
+                            <BookOpen className="w-3.5 h-3.5" />
+                            {course.lessons} lessons
+                          </span>
+                          <span className="flex items-center gap-1">
+                            <Clock className="w-3.5 h-3.5" />
+                            {course.duration}
+                          </span>
+                        </div>
+                        <span
+                          className="flex items-center gap-1 text-sm font-semibold group-hover:gap-2 transition-all"
+                          style={{ color: course.color }}
+                        >
+                          Mulai
+                          <ChevronRight className="w-4 h-4" />
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ) : (
+                <div className="relative bg-[#111] rounded-2xl border border-[#1a1a1a] overflow-hidden opacity-60 h-full">
+                  <div className="h-[2px] w-full" style={{ background: `linear-gradient(90deg, ${course.color}40, transparent)` }} />
+                  <div className="p-6">
+                    <div className="flex items-start justify-between mb-4">
+                      <div
+                        className="w-10 h-10 rounded-xl flex items-center justify-center"
+                        style={{ backgroundColor: `${course.color}10`, color: `${course.color}80` }}
+                      >
+                        {course.icon}
+                      </div>
+                      <span className="text-[10px] px-3 py-1 rounded-full bg-[#1a1a1a] text-[#555] border border-[#222] font-medium">
+                        Coming Soon
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-[#888] mb-1" style={{ fontFamily: "'Syne', sans-serif" }}>
+                      {course.title}
+                    </h3>
+                    <p className="text-xs text-[#555] mb-3 font-mono">{course.subtitle}</p>
+                    <p className="text-sm text-[#666] leading-relaxed mb-4">{course.description}</p>
+
+                    <div className="flex items-center gap-2 mb-4 px-3 py-2 bg-[#10B981]/5 rounded-lg border border-[#10B981]/10">
+                      <TrendingUp className="w-3.5 h-3.5 text-[#10B981]/50" />
+                      <span className="text-xs font-semibold text-[#10B981]/50">{course.earning}</span>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2">
+                      {course.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-[10px] px-2 py-1 rounded-md font-mono bg-[#1a1a1a] text-[#555]"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </motion.div>
           ))}
         </div>
       </div>
@@ -947,6 +1168,7 @@ function Footer() {
           {/* Links */}
           <div className="flex items-center gap-6 text-sm text-[#666]">
             <a href="#courses" className="hover:text-white transition-colors">Courses</a>
+            <Link href="/projects" className="hover:text-white transition-colors">Projects</Link>
             <Link href="/belajar-vibe-coding" className="hover:text-white transition-colors">Panduan</Link>
             <a href="/promptkit/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">PromptKit</a>
             <a href="#tools" className="hover:text-white transition-colors">Tools</a>
@@ -982,6 +1204,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <CoursesSection />
+      <PotensialCuanSection />
       <PromptKitSection />
       <ToolsSection />
       <AboutSection />

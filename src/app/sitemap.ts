@@ -9,6 +9,7 @@ const courseSlugs = [
   "prompt-engineering-pro",
   "ship-it-deploy-guide",
   "cursor-copilot-mastery",
+  "tempo-mpp-machine-payments",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

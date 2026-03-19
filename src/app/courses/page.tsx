@@ -12,18 +12,19 @@ import {
   Bot,
   Globe,
   MousePointer2,
+  Wallet,
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Semua Course Vibe Coding Gratis — 6 Courses, 60+ Lessons",
+  title: "Semua Course Vibe Coding Gratis — 7 Courses, 70+ Lessons",
   description:
-    "Daftar semua course vibe coding gratis di VIBENGODING.ID. Dari pemula sampai advanced: Vibe Coding 101, AI-Powered Frontend, Full-Stack, Prompt Engineering, Deploy Guide, Cursor & Copilot. Bahasa Indonesia.",
+    "Daftar semua course vibe coding gratis di VIBENGODING.ID. Dari pemula sampai advanced: Vibe Coding 101, AI-Powered Frontend, Full-Stack, Prompt Engineering, Deploy Guide, Cursor & Copilot, Tempo MPP. Belajar monetisasi coding & AI agent payments. Bahasa Indonesia.",
   alternates: {
     canonical: "https://vibengoding.id/courses",
   },
   openGraph: {
     title: "Semua Course Vibe Coding Gratis — VIBENGODING.ID",
-    description: "6 courses, 60+ lessons vibe coding gratis bahasa Indonesia. Dari nol sampai deploy.",
+    description: "7 courses, 70+ lessons vibe coding gratis bahasa Indonesia. Belajar coding, AI agent payments, dan monetisasi. Dari nol sampai deploy.",
     url: "https://vibengoding.id/courses",
   },
 };
@@ -35,6 +36,7 @@ const iconMap: Record<number, React.ReactNode> = {
   4: <Bot className="w-5 h-5" />,
   5: <Globe className="w-5 h-5" />,
   6: <MousePointer2 className="w-5 h-5" />,
+  7: <Wallet className="w-5 h-5" />,
 };
 
 export default function CoursesPage() {

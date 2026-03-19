@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: "%s | VIBENGODING.ID",
   },
   description:
-    "Platform belajar vibe coding gratis bahasa Indonesia. 6 courses lengkap, 60+ lessons, tools developer, dan panduan membuat website dengan AI. Dari nol sampai deploy — selamanya gratis.",
+    "Platform belajar vibe coding gratis bahasa Indonesia. 7 courses lengkap, 70+ lessons, tools developer, dan panduan membuat website dengan AI. Belajar monetisasi coding, machine payments, dan AI agent. Dari nol sampai deploy — selamanya gratis.",
   keywords: [
     "vibe coding",
     "belajar vibe coding",
@@ -40,6 +40,14 @@ export const metadata: Metadata = {
     "github copilot",
     "belajar web development",
     "coding untuk pemula",
+    "tempo blockchain",
+    "machine payments protocol",
+    "MPP",
+    "AI agent payments",
+    "monetisasi coding",
+    "cuan dari coding",
+    "jual API",
+    "belajar blockchain",
   ],
   authors: [{ name: "VIBENGODING.ID", url: siteUrl }],
   creator: "VIBENGODING.ID",
@@ -65,7 +73,7 @@ export const metadata: Metadata = {
     siteName: "VIBENGODING.ID",
     title: "VIBENGODING.ID — Belajar Vibe Coding Gratis",
     description:
-      "Platform belajar vibe coding gratis untuk developer Indonesia. 6 courses, 60+ lessons, tools siap pakai. Dari nol sampai deploy.",
+      "Platform belajar vibe coding gratis untuk developer Indonesia. 7 courses, 70+ lessons, tools siap pakai. Monetisasi coding & AI agent payments. Dari nol sampai deploy.",
     images: [
       {
         url: "/og-image.png",
@@ -80,7 +88,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "VIBENGODING.ID — Belajar Vibe Coding Gratis",
     description:
-      "Platform belajar vibe coding gratis untuk developer Indonesia. 6 courses, 60+ lessons. Dari nol sampai deploy.",
+      "Platform belajar vibe coding gratis untuk developer Indonesia. 7 courses, 70+ lessons. Monetisasi coding & AI agent payments. Dari nol sampai deploy.",
     images: ["/og-image.png"],
     creator: "@vibengoding",
   },
@@ -134,7 +142,7 @@ function JsonLd() {
     "@type": "ItemList",
     name: "Courses Vibe Coding Gratis",
     description: "Daftar semua course vibe coding gratis di VIBENGODING.ID",
-    numberOfItems: 6,
+    numberOfItems: 7,
     itemListElement: [
       {
         "@type": "ListItem",
@@ -236,6 +244,34 @@ function JsonLd() {
           isAccessibleForFree: true,
           inLanguage: "id",
           courseMode: "online",
+        },
+      },
+      {
+        "@type": "ListItem",
+        position: 7,
+        item: {
+          "@type": "Course",
+          name: "Tempo MPP — Machine Payments for AI Agents",
+          description: "Belajar bikin AI agent yang bisa bayar sendiri dan bangun API berbayar pakai Machine Payments Protocol. Dari setup wallet sampai deploy mainnet.",
+          provider: { "@type": "Organization", name: "VIBENGODING.ID", url: siteUrl },
+          url: `${siteUrl}/courses/tempo-mpp-machine-payments`,
+          isAccessibleForFree: true,
+          inLanguage: "id",
+          courseMode: "online",
+          educationalLevel: "Beginner",
+          numberOfLessons: 13,
+          hasCourseInstance: {
+            "@type": "CourseInstance",
+            courseMode: "online",
+            courseWorkload: "PT3H30M",
+          },
+          offers: {
+            "@type": "Offer",
+            price: "0",
+            priceCurrency: "IDR",
+            availability: "https://schema.org/InStock",
+            category: "Free",
+          },
         },
       },
     ],

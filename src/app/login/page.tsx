@@ -40,7 +40,7 @@ function LoginForm() {
           <div className="bg-[#0a0a0a] rounded-xl border border-[#1a1a1a] p-4 mb-6 space-y-3">
             <div className="flex items-center gap-3 text-sm">
               <BookOpen className="w-4 h-4 text-[#E50914] shrink-0" />
-              <span className="text-[#aaa]">Akses <strong className="text-white">6 courses</strong> lengkap gratis</span>
+              <span className="text-[#aaa]">Akses <strong className="text-white">7 courses</strong> lengkap gratis</span>
             </div>
             <div className="flex items-center gap-3 text-sm">
               <Wrench className="w-4 h-4 text-[#E50914] shrink-0" />

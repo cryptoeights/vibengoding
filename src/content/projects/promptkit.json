@@ -1,0 +1,129 @@
+{
+  "slug": "promptkit",
+  "title": "PromptKit",
+  "subtitle": "AI Video Prompt Builder untuk Higgsfield",
+  "description": "Tool interaktif untuk membuat prompt video AI yang dioptimasi untuk Higgsfield. User pilih gaya visual, kamera, pencahayaan, dan gerakan — lalu AI generate prompt profesional yang siap paste ke model Sora 2, WAN, Kling, Veo, dan Minimax.",
+  "date": "2025-03-15",
+  "status": "completed",
+  "techStack": ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "Zustand"],
+  "aiTools": ["Claude Code", "DeepSeek V3.2"],
+  "category": "web",
+  "demoUrl": "https://vibengoding.id/promptkit/",
+  "localPath": "~/Desktop/Portofolio/promptkit",
+  "icon": "🎬",
+  "color": "#A855F7",
+  "features": [
+    "6 langkah wizard: Subjek, Gaya, Kamera, Cahaya, Gerakan, Model",
+    "10 gaya video: Sinematik, UGC, Komersial, Fashion, ASMR, dll",
+    "14 gerakan kamera: Dolly, Orbit, Crane, FPV Drone, dll",
+    "6 model AI: Sora 2, Veo 3.1, WAN 2.6, Kling 3.0, Minimax, Seedance",
+    "Scene breakdown otomatis untuk video panjang (>10 detik)",
+    "Quick presets untuk viral UGC, produk reveal, horor, fashion",
+    "Generate prompt gambar (keyframe) + prompt video (gerakan)",
+    "Simpan & load prompt tersimpan di browser",
+    "Panduan lengkap Higgsfield untuk pemula"
+  ],
+  "masterPrompt": "Buatkan aplikasi web PromptKit — sebuah AI Video Prompt Builder untuk platform Higgsfield.\n\n## Tech Stack\n- React + TypeScript + Vite\n- Tailwind CSS v4 (dark mode, @theme inline)\n- Framer Motion untuk animasi\n- Zustand untuk state management\n- Lucide React untuk icons\n\n## Design System\nDark mode premium:\n- Background: #09090f, Surface: #12121a\n- Accent: purple #A855F7\n- Font: Space Grotesk (body), Syne (heading), JetBrains Mono (code)\n- Glass effect, glow effects, grain texture overlay\n\n## Fitur Lengkap\n\n### 1. Multi-Step Wizard (6 langkah)\nBuat wizard dengan navigasi next/prev dan progress indicator:\n\n**Step 1 — Subjek & Scene:**\n- Input: Subjek utama (teks), Detail subjek (textarea opsional), Lokasi/background (teks)\n- Contoh placeholder dalam Bahasa Indonesia\n\n**Step 2 — Gaya Video:**\n- 10 gaya dalam grid card selectable: Sinematik 🎬, UGC/TikTok 📱, Iklan/Komersial 💼, Fashion Editorial 👗, ASMR 🎧, Horor 👻, Anime/Kartun 🎨, Dokumenter 📹, Video Musik 🎵, Produk/Macro 📦\n- 10 mood presets sebagai pill buttons: Tegang, Hangat & nostalgia, Energik, Tenang, Gelap & moody, Ceria, Mewah, Mentah & gritty, Bermimpi, Epik\n- Input custom mood\n\n**Step 3 — Kamera & Framing:**\n- 10 shot types (grid): Extreme Close-Up, Close-Up, Medium Close-Up, Medium Shot, Medium Wide, Wide Shot, Extreme Wide, Bird's Eye, Low Angle, Dutch Angle\n- 14 camera moves (grid): Dolly In/Out, Orbit, Crane Up/Down, Handheld, Static, FPV Drone, Tracking, Pan Left/Right, Zoom In/Out, Whip Pan — setiap opsi ada label efek\n- Lens selector (pills): 14mm ultra-wide sampai 200mm telephoto + Anamorphic + iPhone 15 Pro + GoPro\n\n**Step 4 — Pencahayaan & Warna:**\n- 12 lighting options (grid): Cahaya Matahari, Golden Hour, Blue Hour, Mendung Lembut, Neon, Lampu Jalan, Studio Lembut, Studio Tajam, Backlit/Siluet, Cahaya Lilin, Cahaya Bulan, Kabut/Fog\n- Input color palette (teks opsional)\n\n**Step 5 — Gerakan & Aksi:**\n- Input: Aksi/gerakan (textarea), Timing (teks opsional), Audio description (opsional), Dialog (opsional)\n- Durasi selector (pill buttons): 5s, 8s, 10s, 15s, 30s, 60s, 90s, 120s\n- Info box muncul untuk durasi >10 detik: jelaskan bahwa video akan dipecah jadi multi-scene\n\n**Step 6 — Model AI:**\n- 6 model cards besar: Sora 2 ⚡ (realisme), Veo 3.1 🎥 (sinematik), WAN 2.6 📷 (kontrol kamera), Kling 3.0 🎬 (multi-scene + audio), Minimax 🚀 (iterasi cepat), Seedance 🧑‍🎨 (konsistensi karakter)\n- Tips box memilih model\n\n### 2. Quick Presets\n6 preset yang langsung apply semua config sekaligus:\n- Viral UGC Reaction 📱, Reveal Produk Sinematik 💎, Scene Horor Gelap 👻, Fashion Editorial 👗, ASMR Close-Up 🎧, Drone Shot Epik 🦅\n\n### 3. Prompt Generation\nDua mode generate:\n\n**a) API Mode (DeepSeek V3.2):**\n- Kirim config ke DeepSeek API\n- System prompt yang menginstruksikan cara bikin prompt video AI optimal\n- API key disimpan di localStorage\n\n**b) Local Mode (tanpa API):**\n- Compose prompt dari template berdasarkan semua config\n- Mapping setiap setting ke deskripsi English yang optimal\n- Struktur: [STYLE] + [SUBJECT] + [ENVIRONMENT] + [CAMERA] + [LIGHTING] + [MOTION] + [MOOD]\n\n**Output prompt terdiri dari:**\n- 🎨 Prompt Gambar (keyframe untuk Popcorn) — warna cyan\n- 🧑 Prompt Identitas (Seedream/Seedance) — warna magenta\n- 🎬 Prompt Video (gerakan) — warna orange\n- 📋 Prompt Lengkap (paste langsung) — warna accent\n- Tips & alur kerja\n\n### 4. Scene Breakdown (untuk durasi >10 detik)\nOtomatis pecah video panjang jadi scene-scene pendek (5-10 detik):\n- Visual timeline horizontal\n- Setiap scene punya: nomor, timestamp, durasi, deskripsi, image prompt, video prompt, catatan keyframe (🎨 baru / ♻️ reuse)\n- Expandable per scene dengan copy button masing-masing\n- Guide \"Cara Pakai\" untuk pemula\n\n### 5. Prompt Output UI\n- Setiap blok prompt punya label berwarna + tombol \"Salin\" (copy ke clipboard)\n- Feedback \"Tersalin!\" setelah copy\n- Tombol \"Simpan\" — simpan ke localStorage\n- List prompt tersimpan dengan Muat & Hapus\n\n### 6. Panduan Higgsfield (Modal)\nModal guide lengkap dengan 4 tab:\n- Quick Start (3 menit), Video Pendek (≤10s), Video Panjang (>10s), Tips Pro\n- Step-by-step dengan visual, contoh, dan tabel\n\n## Komponen UI\n- OptionCard: card selectable dengan check indicator + animasi scale (Framer Motion)\n- SectionTitle: judul section dengan icon + subtitle\n- TextInput: input/textarea dengan label + hint\n- PromptBlock: tampilkan prompt mono + copy button\n- SceneCard: expandable card per scene\n\nSemua UI text dalam Bahasa Indonesia. Semua prompt output dalam Bahasa Inggris (untuk AI video models). Gunakan AnimatePresence untuk transisi antar step (slide horizontal).",
+  "steps": [
+    {
+      "step": 1,
+      "title": "Setup Project & Tech Stack",
+      "description": "Bikin project React baru pakai Vite dengan TypeScript. Setup Tailwind CSS v4 dan tambahkan dependensi motion + Zustand untuk state management.",
+      "prompts": [
+        {
+          "title": "Init Project Vite + React",
+          "description": "Buat project dasar dengan Vite",
+          "tool": "Terminal",
+          "prompt": "npm create vite@latest promptkit -- --template react-ts\ncd promptkit\nnpm install\nnpm install framer-motion lucide-react zustand\nnpm install -D tailwindcss @tailwindcss/vite",
+          "category": "setup"
+        },
+        {
+          "title": "Design System & Theme",
+          "description": "Minta Claude buatkan design system dark mode dengan warna ungu/fuchsia",
+          "tool": "Claude Code",
+          "prompt": "Buatkan CSS variables dan Tailwind config untuk dark mode app dengan tema:\n- Background: sangat gelap (#09090f)\n- Surface: sedikit lebih terang (#12121a)\n- Accent: ungu/purple (#A855F7)\n- Text: putih ke abu-abu\n- Border: subtle\n- Font: Space Grotesk untuk body, Syne untuk heading, JetBrains Mono untuk code\n\nPakai @theme inline di Tailwind v4. Tambahkan utility class: .glass (glassmorphism), animasi, glow effects.",
+          "category": "styling"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Data Model & Store",
+      "description": "Definisikan semua tipe TypeScript untuk konfigurasi video dan state management pakai Zustand.",
+      "prompts": [
+        {
+          "title": "Definisi Tipe & Zustand Store",
+          "description": "Bikin store untuk wizard multi-step",
+          "tool": "Claude Code",
+          "prompt": "Buatkan Zustand store untuk PromptKit video prompt builder:\n\nConfig yang perlu disimpan:\n- subject, subjectDetails, environment (teks)\n- videoStyle: cinematic | ugc | commercial | fashion | asmr | horror | anime | documentary | music-video | product\n- shotType: extreme-close-up | close-up | medium | wide | dll\n- cameraMove: dolly-in | orbit | crane-up | tracking | dll\n- lens: string (14mm, 50mm, 85mm, dll)\n- lighting: natural-daylight | golden-hour | neon-glow | dll\n- mood, colorPalette, action, timing, duration: string\n- audioDescription, dialogue: string\n- targetModel: sora-2 | veo-3.1 | wan-2.6 | kling-3.0 | minimax | seedance\n\nStore harus punya:\n- config + setConfig (partial update)\n- currentStep (0-5) + navigasi\n- generatedPrompt (image, video, identity, full, tips, scenes)\n- savedPrompts array + save/remove\n- isGenerating flag\n- showGuide flag\n- resetConfig\n\nSemua tipe di-export. Pakai TypeScript strict.",
+          "category": "logic"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Data Referensi Video Production",
+      "description": "Buat database lengkap shot types, camera moves, lighting options, lens choices, model capabilities, dan quick presets.",
+      "prompts": [
+        {
+          "title": "Database Video Production",
+          "description": "Data referensi untuk semua opsi di wizard",
+          "tool": "Claude Code",
+          "prompt": "Buatkan file data.ts berisi konstanta untuk video prompt builder dalam Bahasa Indonesia:\n\n1. VIDEO_STYLES (10 gaya): cinematic, ugc, commercial, fashion, asmr, horror, anime, documentary, music-video, product — masing-masing punya value, label, emoji, desc\n\n2. SHOT_TYPES (10 tipe): extreme-close-up sampai dutch-angle — punya value, label, desc\n\n3. CAMERA_MOVES (14 gerakan): dolly-in/out, orbit, crane, handheld, static, fpv-drone, tracking, pan, zoom, whip-pan — punya value, label, effect\n\n4. HIGGS_MODELS (6 model): sora-2, veo-3.1, wan-2.6, kling-3.0, minimax, seedance — punya value, label, best use case, icon emoji\n\n5. LIGHTING_OPTIONS (12 opsi): natural daylight, golden hour, blue hour, neon, studio, backlit, moonlight, fog — punya value, label, vibe\n\n6. LENS_OPTIONS: array string dari 14mm sampai 200mm + anamorphic + iPhone + GoPro\n\n7. MOOD_PRESETS: 10 preset mood dalam Bahasa Indonesia\n\n8. QUICK_PRESETS (6 preset cepat): Viral UGC, Product Reveal, Horror, Fashion, ASMR, Drone Shot — masing-masing punya name, emoji, dan config object yang langsung apply semua setting\n\nSemua label dan deskripsi dalam Bahasa Indonesia.",
+          "category": "logic"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "UI Komponen & Wizard Steps",
+      "description": "Build semua komponen UI: wizard navigation, form inputs, option cards, dan 6 step screens (Subjek, Gaya, Kamera, Cahaya, Gerakan, Model).",
+      "prompts": [
+        {
+          "title": "Wizard UI Components",
+          "description": "Build komponen-komponen UI reusable",
+          "tool": "Claude Code",
+          "prompt": "Buatkan komponen React untuk multi-step wizard video prompt builder:\n\nKomponen dasar:\n1. OptionCard — card selectable dengan check indicator, animasi scale\n2. SectionTitle — judul section dengan icon dan subtitle\n3. TextInput — input/textarea dengan label dan hint\n\n6 Step screens:\n1. StepSubject — input subjek, detail subjek, lokasi (semua TextInput)\n2. StepStyle — grid OptionCard untuk video style + mood presets (pill buttons) + custom mood input\n3. StepCamera — grid OptionCard untuk shot type + camera move + pill buttons untuk lens\n4. StepLighting — grid OptionCard untuk lighting + input color palette\n5. StepMotion — input aksi/gerakan + timing + audio + dialog + durasi selector (pill buttons 5s-120s) + info box untuk video panjang\n6. StepModel — grid OptionCard besar untuk 6 model AI + tips box\n\nSemua pakai Framer Motion untuk animasi masuk/keluar (slide horizontal). Pakai Zustand store. Dark mode dengan warna accent purple. Bahasa Indonesia.",
+          "category": "component"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "title": "AI Prompt Generation Engine",
+      "description": "Integrasi DeepSeek API untuk generate prompt, plus fallback local generation tanpa API.",
+      "prompts": [
+        {
+          "title": "Prompt Generation Logic",
+          "description": "Engine untuk generate prompt video dari konfigurasi user",
+          "tool": "Claude Code",
+          "prompt": "Buatkan api.ts untuk PromptKit yang generate prompt video AI:\n\n1. generatePrompt(config) — panggil DeepSeek V3.2 API\n   - System prompt yang menjelaskan cara bikin prompt video AI yang optimal\n   - Output: imagePrompt, identityPrompt, videoPrompt, fullPrompt, tips[], scenes[]\n   - Untuk durasi >10 detik: pecah jadi scenes masing-masing 5-10 detik\n   - Setiap scene punya: sceneNumber, timestamp, duration, description, imagePrompt, videoPrompt, keyframeNote\n\n2. generateLocalPrompt(config) — fallback tanpa API\n   - Compose prompt dari template berdasarkan config yang dipilih user\n   - Mapping setiap setting ke deskripsi bahasa Inggris yang optimal untuk AI model\n   - Struktur: [STYLE] + [SUBJECT] + [ENVIRONMENT] + [CAMERA] + [LIGHTING] + [MOTION] + [MOOD]\n\n3. hasApiKey() — cek apakah API key ada di localStorage\n\nAPI key disimpan di localStorage. Kalau ga ada, otomatis pakai local generation.\nSemua prompt output dalam Bahasa Inggris (karena model AI video pakai English).\nTips dan UI text dalam Bahasa Indonesia.",
+          "category": "logic"
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "title": "Scene Breakdown & Output",
+      "description": "Build fitur scene breakdown untuk video panjang (>10 detik), output display dengan copy buttons, dan panduan Higgsfield.",
+      "prompts": [
+        {
+          "title": "Scene Timeline & Output UI",
+          "description": "Tampilan hasil prompt dan breakdown scene",
+          "tool": "Claude Code",
+          "prompt": "Buatkan komponen React untuk output prompt dan scene breakdown:\n\n1. PromptBlock — display satu blok prompt dengan label berwarna, konten mono, tombol copy\n2. PromptOutput — tampilkan semua blok: Prompt Gambar (cyan), Prompt Identitas (magenta), Prompt Video (orange), Prompt Lengkap (accent). Plus tips section.\n3. SceneCard — card per scene: header dengan nomor + timestamp + durasi, keyframe note, expandable image prompt & video prompt masing-masing dengan copy button\n4. SceneTimeline — visual timeline horizontal yang menunjukkan semua scene + durasi. Termasuk \"Cara Pakai\" guide box untuk pemula.\n5. SavedPrompts — list prompt tersimpan dengan tombol Muat dan Hapus\n\nSemua pakai Framer Motion AnimatePresence. Copy ke clipboard dengan feedback \"Tersalin!\". Dark mode, accent purple/cyan/orange.",
+          "category": "component"
+        }
+      ]
+    }
+  ],
+  "lessons": [
+    "Zustand jauh lebih simpel dari Redux untuk state wizard multi-step",
+    "Framer Motion AnimatePresence kunci smooth transition antar step",
+    "Local prompt generation (tanpa API) tetap bagus kalau template-nya detail",
+    "Scene breakdown otomatis bikin user paham alur video panjang",
+    "Quick presets sangat meningkatkan UX — user bisa langsung mulai tanpa bingung",
+    "Bahasa Indonesia di UI + Bahasa Inggris di prompt output = combo terbaik untuk user Indonesia"
+  ],
+  "tags": ["react", "typescript", "vite", "ai-tools", "video", "prompt-engineering", "zustand", "tailwind"]
+}
